@@ -1,0 +1,336 @@
+/*---FlexBox---
+  @flex: flex, flex-inline
+  --------------------------*/
+/*---Flexbox Direction---
+  @type: row, column
+  Direction: normal, reverse
+  --------------------------*/
+/*---Flexbox Wrap---
+  @wrap: wrap, nowrap, wrap-reverse
+  --------------------------*/
+/*---Flexbox Justify Content---
+  @justify-content: start, end, center, space-between, space-around
+
+  *FIXME* - Creates duplicate CSS
+  --------------------------*/
+/*---Flexbox Align Items---
+  @align-items: center, baseline, stretch, start, end
+  --------------------------*/
+/*---Flexbox Align Content---
+  @align-items: start, end, center, space-between, space-around
+
+  *FIXME* - Creates duplicate CSS
+  --------------------------*/
+/* Import Fonts
+------------------------------------------------------------ */
+@import url(//fonts.googleapis.com/css?family=Allura|Raleway:400,200,700);
+/* Font Stacks */
+.customsansserif,
+.customsanserif {
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+}
+.fontawesome {
+  font-family: "FontAwesome";
+}
+/* Colors */
+/* Neutrals */
+/* Arrows */
+/* Buttons */
+.button {
+  padding: 6px 24px;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #FCB040;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: rgba(252, 176, 64, 0);
+  border: 2px solid #FCB040;
+  border-radius: 6px;
+}
+.button:hover,
+.button a:hover {
+  padding: 6px 24px;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #FCB040;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: rgba(252, 176, 64, 0);
+  border: 2px solid #FCB040;
+  border-radius: 6px;
+  background-color: rgba(252, 176, 64, 0.4);
+}
+/* Clears */
+.msd-clearfix {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.page-template-page-sectioned .site-container .site-inner {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+.page-template-page-sectioned .site-container .site-inner .content-sidebar-wrap {
+  background: transparent;
+}
+.sectioned-page-wrapper {
+  position: relative;
+  z-index: 10;
+}
+.sectioned-page-wrapper .section {
+  background-repeat: no-repeat;
+  padding: 0;
+  position: relative;
+}
+.sectioned-page-wrapper .section .section-subtitle,
+.sectioned-page-wrapper .section h4 {
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.625;
+  font-weight: 500;
+  color: #FCB040;
+  line-height: 1.25;
+  margin: 0;
+}
+.sectioned-page-wrapper .section .section-subtitle {
+  margin-bottom: 2rem;
+}
+.sectioned-page-wrapper .section h3 {
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.625;
+  font-weight: 700;
+  color: #888888;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+}
+.sectioned-page-wrapper .section .section-title h3 {
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.625;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2D2D2D;
+  padding-top: 2rem;
+  margin-bottom: 0;
+}
+.sectioned-page-wrapper .section .section-body .wrap {
+  padding: 2rem 0;
+}
+.sectioned-page-wrapper .section .section-body .wrap a,
+.sectioned-page-wrapper .section .section-body .wrap a:link,
+.sectioned-page-wrapper .section .section-body .wrap a:visited {
+  text-decoration: underline;
+}
+.sectioned-page-wrapper .section .section-body:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.sectioned-page-wrapper .section.bkg-grey {
+  background-color: #E3E2E0;
+}
+.sectioned-page-wrapper .section.bkg-blue {
+  background-color: #0098B2;
+  color: #FFF;
+}
+.sectioned-page-wrapper .section.bkg-blue .section-title h3 {
+  color: #FFF;
+}
+.sectioned-page-wrapper .section.bkg-white {
+  background-color: #FFF;
+}
+.sectioned-page-wrapper .section.bkg-grey.arrow-down {
+  position: relative;
+}
+.sectioned-page-wrapper .section.bkg-grey.arrow-down:after {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(227, 226, 224, 0);
+  border-top-color: #E3E2E0;
+  border-width: 20px 40px;
+  margin-left: -40px;
+  z-index: 300;
+}
+.sectioned-page-wrapper .section.bkg-blue.arrow-down {
+  position: relative;
+}
+.sectioned-page-wrapper .section.bkg-blue.arrow-down:after {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 152, 178, 0);
+  border-top-color: #0098B2;
+  border-width: 20px 40px;
+  margin-left: -40px;
+  z-index: 300;
+}
+.sectioned-page-wrapper .section.bkg-white.arrow-down {
+  position: relative;
+}
+.sectioned-page-wrapper .section.bkg-white.arrow-down:after {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #FFF;
+  border-width: 20px 40px;
+  margin-left: -40px;
+  z-index: 300;
+}
+.sectioned-page-wrapper .section.title-bar .section-title h3 {
+  padding-bottom: 2rem;
+}
+.sectioned-page-wrapper .section.title-bar.title-bar-blue .section-title {
+  background-color: #0098B2;
+}
+.sectioned-page-wrapper .section.title-bar.title-bar-blue .section-title h3 {
+  color: #FFF;
+}
+.sectioned-page-wrapper .section.title-bar-blue.arrow-down .section-title {
+  position: relative;
+}
+.sectioned-page-wrapper .section.title-bar-blue.arrow-down .section-title:after {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 152, 178, 0);
+  border-top-color: #0098B2;
+  border-width: 20px 40px;
+  margin-left: -40px;
+  z-index: 300;
+}
+.sectioned-page-wrapper .section.title-bar.arrow-down .section-body {
+  padding-top: 3rem;
+}
+.sectioned-page-wrapper .section.summary .section-body {
+  margin: 4rem auto;
+}
+.sectioned-page-wrapper .section.summary .section-body .bkg-white {
+  background: #FFF;
+  padding: 4rem;
+}
+.sectioned-page-wrapper .section.summary .section-body .bkg-white .section-title h3 {
+  text-align: left;
+  text-transform: none;
+  font-size: 2.4rem;
+}
+.sectioned-page-wrapper .section.summary .section-body .bkg-white .section-subtitle {
+  font-size: 1.8rem;
+}
+.sectioned-page-wrapper .section.summary .section-body .bkg-white .section-title,
+.sectioned-page-wrapper .section.summary .section-body .bkg-white .section-subtitle,
+.sectioned-page-wrapper .section.summary .section-body .bkg-white .content {
+  margin-left: 310px;
+}
+.sectioned-page-wrapper .section.summary .section-body .bkg-white .content {
+  float: none;
+  width: auto;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.sectioned-page-wrapper .section.summary .section-body .bkg-white .content.open {
+  max-height: 600px;
+  height: auto;
+}
+.sectioned-page-wrapper .section.summary .section-body .bkg-white:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.sectioned-page-wrapper .section.summary .section-body .more-wrap {
+  text-align: right;
+  padding: 0;
+}
+.sectioned-page-wrapper .section.summary .section-body .more-wrap .expand {
+  display: inline-block;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.sectioned-page-wrapper .section.summary .section-body .more-wrap .expand i {
+  display: inline-block;
+  background: #FCB040;
+  color: #FFF;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  line-height: 1;
+  position: relative;
+  top: -4px;
+  font-size: 1.2em;
+}
+.sectioned-page-wrapper .section-flow .section-body {
+  font-size: 1.8rem;
+}
+.sectioned-page-wrapper .section-flow .section-body .wrap .col-md-6.first-child {
+  padding-top: 3em;
+}
+@media only screen and (max-width: 767px) {
+  .sectioned-page-wrapper .section.summary .section-body .bkg-white .section-title h3 {
+    text-align: left;
+    text-transform: none;
+    font-size: 1.8rem;
+  }
+  .sectioned-page-wrapper .section.summary .section-body .bkg-white .section-subtitle {
+    font-size: 1.4rem;
+  }
+  .sectioned-page-wrapper .section.summary .section-body .bkg-white .section-title,
+  .sectioned-page-wrapper .section.summary .section-body .bkg-white .section-subtitle,
+  .sectioned-page-wrapper .section.summary .section-body .bkg-white .content {
+    margin-left: 0px;
+  }
+}
+
+/*# sourceMappingURL=sections.css.map */

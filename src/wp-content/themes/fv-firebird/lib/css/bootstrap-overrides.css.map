@@ -1,0 +1,1 @@
+{"version":3,"sources":["bootstrap-overrides.less"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,WAAA","sourcesContent":[".container{\n  max-width: none;\n  width: auto;\n}\n"],"file":"bootstrap-overrides.css"}

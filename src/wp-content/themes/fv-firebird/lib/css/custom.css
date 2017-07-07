@@ -1,0 +1,266 @@
+/*---FlexBox---
+  @flex: flex, flex-inline
+  --------------------------*/
+/*---Flexbox Direction---
+  @type: row, column
+  Direction: normal, reverse
+  --------------------------*/
+/*---Flexbox Wrap---
+  @wrap: wrap, nowrap, wrap-reverse
+  --------------------------*/
+/*---Flexbox Justify Content---
+  @justify-content: start, end, center, space-between, space-around
+
+  *FIXME* - Creates duplicate CSS
+  --------------------------*/
+/*---Flexbox Align Items---
+  @align-items: center, baseline, stretch, start, end
+  --------------------------*/
+/*---Flexbox Align Content---
+  @align-items: start, end, center, space-between, space-around
+
+  *FIXME* - Creates duplicate CSS
+  --------------------------*/
+/* Import Fonts
+------------------------------------------------------------ */
+@import url(//fonts.googleapis.com/css?family=Allura|Raleway:400,200,700);
+/* Font Stacks */
+.customsansserif,
+.customsanserif {
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+}
+.fontawesome {
+  font-family: "FontAwesome";
+}
+/* Colors */
+/* Neutrals */
+/* Arrows */
+/* Buttons */
+.button {
+  padding: 6px 24px;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #FCB040;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: rgba(252, 176, 64, 0);
+  border: 2px solid #FCB040;
+  border-radius: 6px;
+}
+.button:hover,
+.button a:hover {
+  padding: 6px 24px;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #FCB040;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: rgba(252, 176, 64, 0);
+  border: 2px solid #FCB040;
+  border-radius: 6px;
+  background-color: rgba(252, 176, 64, 0.4);
+}
+/* Clears */
+.msd-clearfix {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.site-header .widget-area .widget.widget_text {
+  font-family: "Raleway", "Helvetica Neue", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.625;
+  color: #FFF;
+  padding-top: 1.4em;
+  line-height: 1.8;
+}
+.page-title-area {
+  background: #FFF;
+}
+.page-title-area .banner {
+  background-image: url(../img/pg_bkg_lifestyle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-title {
+  text-align: center;
+  text-shadow: 0 0 8px #888888;
+  background: rgba(255, 255, 255, 0);
+  display: block;
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-size: 80px;
+  font-size: 8rem;
+  line-height: 1;
+  padding: 1em 0;
+  color: #FFF;
+}
+.section-title a,
+.section-title a:visited {
+  color: #FFF;
+  opacity: 0.5;
+}
+.section-title a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+.sidebar.sidebar-primary .button {
+  padding: 6px 24px;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: rgba(0, 152, 178, 0);
+  border: 2px solid #FFF;
+  border-radius: 6px;
+  background-color: #0098B2;
+}
+.sidebar.sidebar-primary .button:hover {
+  background-color: rgba(0, 152, 178, 0.8);
+}
+.sidebar.sidebar-primary section.widget.widget_text {
+  padding: 2rem;
+  margin-bottom: 4rem;
+  color: #888888;
+}
+.sidebar.sidebar-primary section.widget.widget_text .widget-wrap {
+  background-color: #FCB040;
+  border: 1px solid #888888;
+  border-radius: 12px;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2.1rem;
+}
+.sidebar.sidebar-primary section.widget.widget_text .widget-wrap .widget-title {
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 50px auto;
+  background-image: url(../img/icon-calculator.png);
+  padding-left: 55px;
+  color: #888888;
+  font-size: 3rem;
+  line-height: 1;
+}
+.sidebar.sidebar-primary section.widget.widget_text .widget-wrap .button {
+  padding: 6px 24px;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #888888;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #888888;
+  border-radius: 6px;
+  background-color: #FFF;
+  font-size: 14px;
+  width: 98%;
+}
+.text-sizer {
+  display: block;
+  z-index: 90;
+  color: #888888;
+  text-align: right;
+}
+.text-sizer div {
+  border: 1px solid #D4D4D4;
+  background: rgba(255, 255, 255, 0.8);
+  width: auto;
+  padding: 0.5em 1em;
+  float: right;
+}
+.text-sizer div i {
+  margin-left: 0.5em;
+  padding: 0.5em;
+  color: #888888;
+  cursor: pointer;
+}
+.msd-fa.block,
+.msd-icon.block {
+  display: block;
+}
+.msd-fa.block:before,
+.msd-icon.block:before {
+  margin: 0 auto;
+  display: block;
+}
+.msd-fa.circle:before,
+.msd-icon.circle:before,
+.msd-fa.square:before,
+.msd-icon.square:before {
+  background: #fca627;
+  color: #FFF;
+  border: 2px solid white;
+  height: 2.4em;
+  width: 2.4em;
+  text-align: center;
+  padding: 0.7em 0;
+  display: inline-block;
+}
+.msd-fa.circle:before,
+.msd-icon.circle:before {
+  border-radius: 50%;
+}
+.su-accordion > p {
+  display: none;
+}
+.su-accordion .su-spoiler .su-spoiler-title {
+  font-family: "Raleway", "Helvetica Neue", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.625;
+  color: #0098B2;
+}
+.su-accordion .su-spoiler .su-spoiler-title .su-spoiler-icon {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.notification-bar {
+  background: #682122;
+  text-align: center;
+  color: #FFF;
+  padding: 0.5em 0;
+  z-index: 200;
+}
+.notification-bar p {
+  margin: 0;
+}
+
+/*# sourceMappingURL=custom.css.map */

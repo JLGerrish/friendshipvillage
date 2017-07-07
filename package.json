@@ -1,0 +1,11 @@
+{
+  "name": "friendshipvillage",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-sourcemaps": "^2.6.0"
+  }
+}

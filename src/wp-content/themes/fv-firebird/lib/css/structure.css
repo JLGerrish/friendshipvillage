@@ -1,0 +1,158 @@
+/*---FlexBox---
+  @flex: flex, flex-inline
+  --------------------------*/
+/*---Flexbox Direction---
+  @type: row, column
+  Direction: normal, reverse
+  --------------------------*/
+/*---Flexbox Wrap---
+  @wrap: wrap, nowrap, wrap-reverse
+  --------------------------*/
+/*---Flexbox Justify Content---
+  @justify-content: start, end, center, space-between, space-around
+
+  *FIXME* - Creates duplicate CSS
+  --------------------------*/
+/*---Flexbox Align Items---
+  @align-items: center, baseline, stretch, start, end
+  --------------------------*/
+/*---Flexbox Align Content---
+  @align-items: start, end, center, space-between, space-around
+
+  *FIXME* - Creates duplicate CSS
+  --------------------------*/
+/* Import Fonts
+------------------------------------------------------------ */
+@import url(//fonts.googleapis.com/css?family=Allura|Raleway:400,200,700);
+/* Font Stacks */
+.customsansserif,
+.customsanserif {
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+}
+.fontawesome {
+  font-family: "FontAwesome";
+}
+/* Colors */
+/* Neutrals */
+/* Arrows */
+/* Buttons */
+.button {
+  padding: 6px 24px;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #FCB040;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: rgba(252, 176, 64, 0);
+  border: 2px solid #FCB040;
+  border-radius: 6px;
+}
+.button:hover,
+.button a:hover {
+  padding: 6px 24px;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #FCB040;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: rgba(252, 176, 64, 0);
+  border: 2px solid #FCB040;
+  border-radius: 6px;
+  background-color: rgba(252, 176, 64, 0.4);
+}
+/* Clears */
+.msd-clearfix {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*
+Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+/* Site Containers
+--------------------------------------------- */
+.wrap,
+.sidebar-primary section,
+.sidebar-secondary section,
+article {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.site-inner {
+  clear: both;
+  padding: 0;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNFM0UyRTAiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMzMlIiBzdG9wLWNvbG9yPSIjRTNFMkUwIiBzdG9wLW9wYWNpdHk9IjEiLz48c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iI0ZGRiIgc3RvcC1vcGFjaXR5PSIxIi8+PHN0b3Agb2Zmc2V0PSI5OSUiIHN0b3AtY29sb3I9IiNGRkYiIHN0b3Atb3BhY2l0eT0iMSIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNsZXNzaGF0LWdlbmVyYXRlZCkiIC8+PC9zdmc+);
+  background-image: -webkit-linear-gradient(left, #E3E2E0 0%, #E3E2E0 33.3%, #FFF 33.4%, #FFF 100%);
+  background-image: -moz-linear-gradient(left, #E3E2E0 0%, #E3E2E0 33.3%, #FFF 33.4%, #FFF 100%);
+  background-image: -o-linear-gradient(left, #E3E2E0 0%, #E3E2E0 33.3%, #FFF 33.4%, #FFF 100%);
+  background-image: linear-gradient(to right, #E3E2E0 0%, #E3E2E0 33.3%, #FFF 33.4%, #FFF 100%);
+}
+/* Column Widths and Positions
+--------------------------------------------- */
+/* Wrapping div for .content and .sidebar-primary */
+.content-sidebar-sidebar .content-sidebar-wrap,
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+  padding: 0;
+}
+.content-sidebar-sidebar .content-sidebar-wrap {
+  float: left;
+}
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+  float: left;
+}
+/* Content */
+.content {
+  float: right;
+}
+.content-sidebar .content,
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content {
+  float: left;
+}
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content,
+.sidebar-sidebar-content .content {
+  /*width: 520px;*/
+}
+.full-width-content .content {
+  width: 100%;
+}
+/* Primary Sidebar */
+.sidebar-primary {
+  float: left;
+}
+.sidebar-content .sidebar-primary,
+.sidebar-sidebar-content .sidebar-primary {
+  float: left;
+}
+/* Secondary Sidebar */
+.sidebar-secondary {
+  float: right;
+}
+.content-sidebar-sidebar .sidebar-secondary {
+  float: right;
+}
+
+/*# sourceMappingURL=structure.css.map */

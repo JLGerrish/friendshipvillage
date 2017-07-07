@@ -1,0 +1,426 @@
+/*---FlexBox---
+  @flex: flex, flex-inline
+  --------------------------*/
+/*---Flexbox Direction---
+  @type: row, column
+  Direction: normal, reverse
+  --------------------------*/
+/*---Flexbox Wrap---
+  @wrap: wrap, nowrap, wrap-reverse
+  --------------------------*/
+/*---Flexbox Justify Content---
+  @justify-content: start, end, center, space-between, space-around
+
+  *FIXME* - Creates duplicate CSS
+  --------------------------*/
+/*---Flexbox Align Items---
+  @align-items: center, baseline, stretch, start, end
+  --------------------------*/
+/*---Flexbox Align Content---
+  @align-items: start, end, center, space-between, space-around
+
+  *FIXME* - Creates duplicate CSS
+  --------------------------*/
+/* Import Fonts
+------------------------------------------------------------ */
+@import url(//fonts.googleapis.com/css?family=Allura|Raleway:400,200,700);
+/* Font Stacks */
+.customsansserif,
+.customsanserif {
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+}
+.fontawesome {
+  font-family: "FontAwesome";
+}
+/* Colors */
+/* Neutrals */
+/* Arrows */
+/* Buttons */
+.button {
+  padding: 6px 24px;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #FCB040;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: rgba(252, 176, 64, 0);
+  border: 2px solid #FCB040;
+  border-radius: 6px;
+}
+.button:hover,
+.button a:hover {
+  padding: 6px 24px;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  color: #FCB040;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: table;
+  margin: 12px auto;
+  text-decoration: none;
+  background-color: rgba(252, 176, 64, 0);
+  border: 2px solid #FCB040;
+  border-radius: 6px;
+  background-color: rgba(252, 176, 64, 0.4);
+}
+/* Clears */
+.msd-clearfix {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*
+Site Navigation
+---------------------------------------------------------------------------------------------------- */
+.genesis-nav-menu {
+  clear: both;
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+  line-height: 1.5;
+  width: 100%;
+}
+.genesis-nav-menu .menu-item,
+.genesis-nav-menu .separator {
+  display: inline-block;
+  text-align: left;
+}
+.genesis-nav-menu .menu-item a,
+.genesis-nav-menu .separator a {
+  border: none;
+  display: block;
+  padding: 20px;
+  padding: 2rem;
+  position: relative;
+}
+.genesis-nav-menu .menu-item a:hover,
+.genesis-nav-menu .separator a:hover {
+  text-decoration: none;
+}
+.genesis-nav-menu .sub-menu {
+  left: -9999px;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  width: 200px;
+  z-index: 99;
+}
+.genesis-nav-menu .sub-menu a {
+  background: #FFF;
+  border: 1px solid #eee;
+  border-top: none;
+  font-size: 16px;
+  font-size: 1.6rem;
+  padding: 16px 20px;
+  padding: 1.6rem 2rem;
+  position: relative;
+  width: 196px;
+}
+.genesis-nav-menu .sub-menu .sub-menu {
+  margin: -54px 0 0 190px;
+}
+.genesis-nav-menu .menu-item:hover {
+  position: static;
+}
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+  left: auto;
+  opacity: 1;
+}
+.genesis-nav-menu > .first-child > a {
+  padding-left: 0;
+}
+.genesis-nav-menu > .last-child > a {
+  padding-right: 0;
+}
+.genesis-nav-menu > .right {
+  display: inline-block;
+  float: right;
+  list-style-type: none;
+  padding: 28px 0;
+  padding: 2.8rem 0;
+  text-transform: uppercase;
+}
+.genesis-nav-menu > .right > a {
+  display: inline;
+  padding: 0;
+}
+.genesis-nav-menu > .rss > a {
+  margin-left: 48px;
+  margin-left: 4.8rem;
+}
+.genesis-nav-menu > .search {
+  padding: 14px 0 0;
+  padding: 1.4rem 0 0;
+}
+/* Site Header Navigation
+--------------------------------------------- */
+.site-header .sub-menu {
+  border-top: 1px solid #eee;
+}
+.site-header .sub-menu .sub-menu {
+  margin-top: -55px;
+}
+/* Primary Navigation
+--------------------------------------------- */
+.nav-primary {
+  display: inline-block;
+  width: 80%;
+  text-align: right;
+}
+.nav-primary li.menu-item a {
+  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 11.5px;
+  font-size: 1.15rem;
+  line-height: 1.625;
+  padding: 1em .75em;
+  color: #2c363f;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.nav-primary li.menu-item a:after {
+  font-family: 'FontAwesome';
+  content: '\f107';
+  font-size: 1.2em;
+  margin-left: .25em;
+}
+.nav-primary li.menu-item.first-child {
+  padding-left: 0;
+}
+.nav-primary li.menu-item.last-child {
+  padding-right: 0;
+}
+.nav-primary li.menu-item .sub-menu {
+  margin-top: 0px;
+  background-color: #FFF;
+  border: 1px solid #D4D4D4;
+}
+.nav-primary li.menu-item .sub-menu li.menu-item {
+  padding: 0 2rem;
+  width: 100%;
+  position: relative;
+}
+.nav-primary li.menu-item .sub-menu li.menu-item a {
+  background-color: transparent;
+  border: 0;
+  color: #888888;
+  padding: 1rem 0;
+  width: 100%;
+}
+.nav-primary li.menu-item .sub-menu li.menu-item .sub-menu {
+  left: 0;
+  top: 0;
+}
+.nav-primary li.menu-item .sub-menu > li.menu-item.menu-item-has-children > a:after {
+  font-family: "FontAwesome";
+  content: '\f105';
+  margin: 0 0.5em;
+}
+.nav-primary li.menu-item .sub-menu li.last-child > a {
+  border: 0;
+}
+.nav-primary li.menu-item .sub-menu li:hover > a {
+  color: #0098B2;
+  text-decoration: none;
+}
+.nav-primary .menu > li.menu-item.menu-item-has-children {
+  /*>a:after{
+      .fontawesome;
+      content: '\f107';
+      margin: 0 0.5em;
+    }*/
+}
+.nav-primary li:hover a,
+.nav-primary li.current-menu-item a,
+.nav-primary li.current-menu-ancestor a,
+.nav-primary li:hover a:hover,
+.nav-primary li.current-menu-item a:hover,
+.nav-primary li.current-menu-ancestor a:hover {
+  background-color: #42badc;
+  text-decoration: none;
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.44);
+}
+.mainNav > ul > li.first > ul > li.title > ul > li > ul > li {
+  padding: 3px 0;
+}
+/* Secondary Navigation
+--------------------------------------------- */
+.nav-secondary {
+  padding: 0.5rem 0;
+}
+.nav-secondary .wrap li.menu-item {
+  width: auto;
+  position: relative;
+}
+.nav-secondary .wrap li.menu-item > a {
+  font-family: "Raleway", "Helvetica Neue", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.625;
+  padding: 0.5rem 1rem;
+  color: #D4D4D4;
+  text-transform: uppercase;
+}
+.nav-secondary .wrap li.menu-item > a:hover {
+  color: #FCB040;
+}
+.nav-secondary .wrap li.menu-item ul {
+  display: none;
+  position: absolute;
+  background: #D4D4D4;
+  text-align: center;
+  left: 20px;
+  z-index: 500;
+}
+.nav-secondary .wrap li.menu-item ul li {
+  border: 0;
+  display: block;
+  width: auto;
+}
+.nav-secondary .wrap li.menu-item ul li a {
+  border: 0;
+  color: #2D2D2D;
+  width: auto;
+  padding: 0 0 0 20px;
+  background-position: left center;
+}
+.nav-secondary .wrap li.menu-item.last-child {
+  border: 0;
+}
+.nav-secondary .wrap li:hover ul {
+  display: block;
+}
+/* Footer Navigation
+--------------------------------------------- */
+.nav-footer {
+  padding: 0.5rem 0;
+  font-size: 1.3rem;
+}
+.nav-footer li.menu-item {
+  width: auto;
+  position: relative;
+}
+.nav-footer li.menu-item > a {
+  padding: 0 1rem;
+}
+.nav-footer li.menu-item.last-child {
+  border: 0;
+}
+.widget_advanced_menu .menu {
+  display: block;
+}
+.widget_advanced_menu .menu > li {
+  display: none;
+}
+.widget_advanced_menu .menu > li.current-menu-item,
+.widget_advanced_menu .menu > li.current-menu-ancestor {
+  display: block;
+}
+.widget_advanced_menu .menu > li.current-menu-item a,
+.widget_advanced_menu .menu > li.current-menu-ancestor a {
+  text-decoration: none;
+  font-size: 22px;
+  font-size: 2.2rem;
+  border-bottom: 0;
+  color: #0098B2;
+}
+.widget_advanced_menu .menu > li.current-menu-item ul.sub-menu,
+.widget_advanced_menu .menu > li.current-menu-ancestor ul.sub-menu {
+  max-height: 0;
+  display: block;
+  margin-left: 0;
+  overflow: hidden;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+.widget_advanced_menu .menu > li.current-menu-item > ul.sub-menu,
+.widget_advanced_menu .menu > li.current-menu-ancestor > ul.sub-menu {
+  height: auto;
+  max-height: 400px;
+}
+.widget_advanced_menu .menu > li.current-menu-item li,
+.widget_advanced_menu .menu > li.current-menu-ancestor li {
+  border-top: 2px dashed #B7B7B7;
+  margin: 0;
+}
+.widget_advanced_menu .menu > li.current-menu-item li.first-child,
+.widget_advanced_menu .menu > li.current-menu-ancestor li.first-child {
+  border-top: 0;
+}
+.widget_advanced_menu .menu > li.current-menu-item li i,
+.widget_advanced_menu .menu > li.current-menu-ancestor li i {
+  color: #888888;
+  width: 1em;
+  margin: 0 1rem;
+}
+.widget_advanced_menu .menu > li.current-menu-item li i.fa-plus,
+.widget_advanced_menu .menu > li.current-menu-ancestor li i.fa-plus,
+.widget_advanced_menu .menu > li.current-menu-item li i.fa-minus,
+.widget_advanced_menu .menu > li.current-menu-ancestor li i.fa-minus {
+  cursor: pointer;
+}
+.widget_advanced_menu .menu > li.current-menu-item li a,
+.widget_advanced_menu .menu > li.current-menu-ancestor li a {
+  color: #888888;
+  padding: 1rem 0;
+  display: inline-block;
+  width: 80%;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.widget_advanced_menu .menu > li.current-menu-item li:hover,
+.widget_advanced_menu .menu > li.current-menu-ancestor li:hover {
+  background: rgba(136, 136, 136, 0.1);
+}
+.widget_advanced_menu .menu > li.current-menu-item li:hover a:hover,
+.widget_advanced_menu .menu > li.current-menu-ancestor li:hover a:hover {
+  text-decoration: none;
+}
+.widget_advanced_menu .menu > li.current-menu-item li > ul.sub-menu,
+.widget_advanced_menu .menu > li.current-menu-ancestor li > ul.sub-menu {
+  background: #E3E2E0;
+}
+.widget_advanced_menu .menu > li.current-menu-item li > ul.sub-menu li,
+.widget_advanced_menu .menu > li.current-menu-ancestor li > ul.sub-menu li {
+  border-top: 2px dashed #B7B7B7;
+  padding-left: 6rem;
+}
+.widget_advanced_menu .menu > li.current-menu-item li.open > ul.sub-menu,
+.widget_advanced_menu .menu > li.current-menu-ancestor li.open > ul.sub-menu {
+  height: auto;
+  max-height: 400px;
+}
+
+/*# sourceMappingURL=navigation.css.map */
