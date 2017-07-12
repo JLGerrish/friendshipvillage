@@ -1,33 +1,10 @@
-/*---FlexBox---
-  @flex: flex, flex-inline
-  --------------------------*/
-/*---Flexbox Direction---
-  @type: row, column
-  Direction: normal, reverse
-  --------------------------*/
-/*---Flexbox Wrap---
-  @wrap: wrap, nowrap, wrap-reverse
-  --------------------------*/
-/*---Flexbox Justify Content---
-  @justify-content: start, end, center, space-between, space-around
-
-  *FIXME* - Creates duplicate CSS
-  --------------------------*/
-/*---Flexbox Align Items---
-  @align-items: center, baseline, stretch, start, end
-  --------------------------*/
-/*---Flexbox Align Content---
-  @align-items: start, end, center, space-between, space-around
-
-  *FIXME* - Creates duplicate CSS
-  --------------------------*/
 /* Import Fonts
 ------------------------------------------------------------ */
-@import url(//fonts.googleapis.com/css?family=Allura|Raleway:400,200,700);
+@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans);
 /* Font Stacks */
 .customsansserif,
 .customsanserif {
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -42,7 +19,7 @@
 /* Buttons */
 .button {
   padding: 6px 24px;
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -61,7 +38,7 @@
 .button:hover,
 .button a:hover {
   padding: 6px 24px;
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -205,7 +182,7 @@ img#wpstats {
 .job-manager-application-wrapper .application .application_button,
 .single_job_listing .application .application_button {
   padding: 6px 24px;
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;

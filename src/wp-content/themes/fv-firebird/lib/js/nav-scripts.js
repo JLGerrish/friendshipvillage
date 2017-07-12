@@ -1,5 +1,49 @@
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
+    //testing
+    $('#mobile-menu-open').addClass('active');
+    $('#menu-topnav').slideDown( 500 );
+
     
+
+    $('#mobile-menu-open a').on('click', function(e) {
+        e.preventDefault();
+
+        var $mobileMenuOpen = $(this).parent();
+        $mobileMenuOpen.toggleClass('active');
+        if ($mobileMenuOpen.hasClass('open'))
+            $('#menu-topnav').slideUp( 500 );
+        else
+            $('#menu-topnav').slideDown( 500 );
+    });
+
+    $('#menu-topnav li.menu-item-has-children .toggle').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        $(this).find('.sub-menu').slideToggle(500);
+        $(this).find('.fa').toggleClass('fa-angle-down fa-angle-up');
+    });
+
+    var mobileNav = false;
+    function windowResizeHandler() {
+        if($( window ).width() >= 768){
+            if (mobileNav) {
+                $('#menu-topnav').find('li.menu-item-has-children span.toggle').remove();
+                mobileNav = false;
+            }
+        } else {
+            // alter menu
+            if (!mobileNav) {
+                $('#menu-topnav').find('li.menu-item-has-children > a').append('<span class="toggle"><i class="fa fa-2x fa-angle-down"></i></span>');
+                mobileNav = true;
+            }
+        }
+    }
+
+    windowResizeHandler();
+    $(window).on('resize', windowResizeHandler);
+
+
 /*RESPONSIVE NAVIGATION, COMBINES MENUS EXCEPT FOR FOOTER MENU*/
 
     //jQuery('.menu').not('#footer .menu, #footer-widgets .menu').wrap('<div id="nav-response" class="nav-responsive">');

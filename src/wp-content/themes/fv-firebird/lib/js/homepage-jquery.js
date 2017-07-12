@@ -5,10 +5,17 @@ jQuery(document).ready(function($) {
     $('#homepage-widgets section.widget').addClass('col-sm-'+cols);
     $('#homepage-widgets section.widget').addClass('col-xs-12');
 
-    var preheaderheight = $(".pre-header").outerHeight();
-    var headerheight = $(".site-header").outerHeight();
-    if($( window ).width() > 480){
-        //$(".hp-top").sticky({topSpacing:preheaderheight+headerheight});
-    } else {
+    function windowResizeHandler() {
+        var preheaderheight = $(".pre-header").outerHeight();
+        var headerheight = $(".site-header").outerHeight();
+        if($( window ).width() >= 768){
+            //$(".hp-top").sticky({topSpacing:preheaderheight+headerheight});
+            $(".site-container").css({marginTop: preheaderheight + headerheight + "px"});
+        } else {
+            $(".site-container").css({marginTop: ""});
+        }
     }
+
+    windowResizeHandler();
+    $(window).on('resize', windowResizeHandler);
 });

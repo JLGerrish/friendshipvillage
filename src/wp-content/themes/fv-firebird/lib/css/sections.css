@@ -1,33 +1,10 @@
-/*---FlexBox---
-  @flex: flex, flex-inline
-  --------------------------*/
-/*---Flexbox Direction---
-  @type: row, column
-  Direction: normal, reverse
-  --------------------------*/
-/*---Flexbox Wrap---
-  @wrap: wrap, nowrap, wrap-reverse
-  --------------------------*/
-/*---Flexbox Justify Content---
-  @justify-content: start, end, center, space-between, space-around
-
-  *FIXME* - Creates duplicate CSS
-  --------------------------*/
-/*---Flexbox Align Items---
-  @align-items: center, baseline, stretch, start, end
-  --------------------------*/
-/*---Flexbox Align Content---
-  @align-items: start, end, center, space-between, space-around
-
-  *FIXME* - Creates duplicate CSS
-  --------------------------*/
 /* Import Fonts
 ------------------------------------------------------------ */
-@import url(//fonts.googleapis.com/css?family=Allura|Raleway:400,200,700);
+@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans);
 /* Font Stacks */
 .customsansserif,
 .customsanserif {
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -42,7 +19,7 @@
 /* Buttons */
 .button {
   padding: 6px 24px;
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -61,7 +38,7 @@
 .button:hover,
 .button a:hover {
   padding: 6px 24px;
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -105,7 +82,7 @@
 }
 .sectioned-page-wrapper .section .section-subtitle,
 .sectioned-page-wrapper .section h4 {
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 18px;
   font-size: 1.8rem;
@@ -119,7 +96,7 @@
   margin-bottom: 2rem;
 }
 .sectioned-page-wrapper .section h3 {
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 18px;
   font-size: 1.8rem;
@@ -130,7 +107,7 @@
   margin-bottom: 0.5em;
 }
 .sectioned-page-wrapper .section .section-title h3 {
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 24px;
   font-size: 2.4rem;

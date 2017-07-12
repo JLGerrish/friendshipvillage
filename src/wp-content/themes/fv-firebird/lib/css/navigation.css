@@ -1,33 +1,10 @@
-/*---FlexBox---
-  @flex: flex, flex-inline
-  --------------------------*/
-/*---Flexbox Direction---
-  @type: row, column
-  Direction: normal, reverse
-  --------------------------*/
-/*---Flexbox Wrap---
-  @wrap: wrap, nowrap, wrap-reverse
-  --------------------------*/
-/*---Flexbox Justify Content---
-  @justify-content: start, end, center, space-between, space-around
-
-  *FIXME* - Creates duplicate CSS
-  --------------------------*/
-/*---Flexbox Align Items---
-  @align-items: center, baseline, stretch, start, end
-  --------------------------*/
-/*---Flexbox Align Content---
-  @align-items: start, end, center, space-between, space-around
-
-  *FIXME* - Creates duplicate CSS
-  --------------------------*/
 /* Import Fonts
 ------------------------------------------------------------ */
-@import url(//fonts.googleapis.com/css?family=Allura|Raleway:400,200,700);
+@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans);
 /* Font Stacks */
 .customsansserif,
 .customsanserif {
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -42,7 +19,7 @@
 /* Buttons */
 .button {
   padding: 6px 24px;
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -61,7 +38,7 @@
 .button:hover,
 .button a:hover {
   padding: 6px 24px;
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -91,7 +68,7 @@ Site Navigation
 ---------------------------------------------------------------------------------------------------- */
 .genesis-nav-menu {
   clear: both;
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
+  font-family: "Tangerine";
   font-weight: 400;
   font-size: 16px;
   font-size: 1.6rem;
@@ -185,17 +162,116 @@ Site Navigation
 }
 /* Primary Navigation
 --------------------------------------------- */
+#mobile-menu-open {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  #mobile-menu-open {
+    display: none;
+  }
+}
+#mobile-menu-open.active {
+  background: #004843;
+}
+#mobile-menu-open.active a {
+  color: #FFF;
+}
+#mobile-menu-open a {
+  color: #004843;
+  text-decoration: none;
+  padding: 0 2.5rem;
+}
+#mobile-menu-open a span {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media (max-width: 1023px) {
+  #menu-topnav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #FFF;
+    color: #FFF;
+    font-size: 1.6rem;
+  }
+  #menu-topnav li {
+    display: block;
+    border-bottom: solid 1px;
+  }
+  #menu-topnav li:hover a,
+  #menu-topnav li.current-menu-item a,
+  #menu-topnav li.current-menu-ancestor a {
+    background: rgba(0, 72, 67, 0.8);
+  }
+  #menu-topnav li.menu-item-has-children {
+    /*> a:after{
+          .fontawesome;
+          content: '\f0da';
+          margin: 0 0.5em;
+          position: absolute;
+          right: 0;
+        }*/
+  }
+  #menu-topnav li.menu-item-has-children .toggle {
+    position: absolute;
+    right: 0;
+  }
+  #menu-topnav li a {
+    color: #FFF;
+    background: #004843;
+    text-transform: uppercase;
+  }
+  #menu-topnav .sub-menu {
+    width: 100%;
+    background: #004843;
+  }
+}
+@media (min-width: 1024px) {
+  #menu-topnav {
+    display: block;
+    position: relative;
+  }
+}
 .nav-primary {
   display: inline-block;
-  width: 80%;
+  width: 100%;
   text-align: right;
 }
+@media (min-width: 1024px) {
+  .nav-primary {
+    width: 80%;
+  }
+}
 .nav-primary li.menu-item a {
-  font-family: "Raleway", "Trebuchet MS", Calibri, sans-serif;
-  font-weight: 400;
-  font-size: 11.5px;
-  font-size: 1.15rem;
-  line-height: 1.625;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.6rem;
   padding: 1em .75em;
   color: #2c363f;
   font-weight: bold;
@@ -205,11 +281,10 @@ Site Navigation
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.nav-primary li.menu-item a:after {
-  font-family: 'FontAwesome';
-  content: '\f107';
-  font-size: 1.2em;
-  margin-left: .25em;
+@media (min-width: 1024px) {
+  .nav-primary li.menu-item a {
+    font-size: 1.15rem;
+  }
 }
 .nav-primary li.menu-item.first-child {
   padding-left: 0;
@@ -247,8 +322,22 @@ Site Navigation
   border: 0;
 }
 .nav-primary li.menu-item .sub-menu li:hover > a {
-  color: #0098B2;
+  color: #42badc;
   text-decoration: none;
+}
+.nav-primary ul.menu-primary > li.menu-item:hover > a,
+.nav-primary ul.menu-primary > li.menu-item.current-menu-item > a,
+.nav-primary ul.menu-primary > li.menu-item.current-menu-ancestor > a {
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.44);
+  background-color: #42badc;
+  text-decoration: none;
+}
+.nav-primary ul.menu-primary > li.menu-item.menu-item-has-children > a:after {
+  font-family: 'FontAwesome';
+  content: '\f107';
+  font-size: 1.2em;
+  margin-left: .25em;
+  line-height: 1;
 }
 .nav-primary .menu > li.menu-item.menu-item-has-children {
   /*>a:after{
@@ -256,16 +345,6 @@ Site Navigation
       content: '\f107';
       margin: 0 0.5em;
     }*/
-}
-.nav-primary li:hover a,
-.nav-primary li.current-menu-item a,
-.nav-primary li.current-menu-ancestor a,
-.nav-primary li:hover a:hover,
-.nav-primary li.current-menu-item a:hover,
-.nav-primary li.current-menu-ancestor a:hover {
-  background-color: #42badc;
-  text-decoration: none;
-  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.44);
 }
 .mainNav > ul > li.first > ul > li.title > ul > li > ul > li {
   padding: 3px 0;
@@ -280,8 +359,8 @@ Site Navigation
   position: relative;
 }
 .nav-secondary .wrap li.menu-item > a {
-  font-family: "Raleway", "Helvetica Neue", "Trebuchet MS", Calibri, sans-serif;
-  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.625;

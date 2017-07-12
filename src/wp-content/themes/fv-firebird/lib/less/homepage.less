@@ -2,6 +2,12 @@
 @import 'mixins';
 //@import "node_modules/flex-less/flex";
 
+@media @tablet {
+  .site-container {
+    padding-top: 466/1199*100%; //same as hero image. the rest is calculated in JS
+  }
+}
+
 .hp-top{
   z-index: -1;
   width: 100%;
@@ -12,12 +18,7 @@
       position: relative;
 
       .wrap {
-        //.flex(); why does this mixin not work??
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
+        .display(flex);
         .flex-direction(column);
         .justify-content(center);
         position: absolute;
@@ -31,15 +32,19 @@
       }
     }
     h2.hero-title{
-      .customheader(5);
+      .customheader(11.9); //9.9
       color: @white;
-      text-transform: uppercase;
-      font-weight: 600;
+      //text-transform: uppercase;
+      //font-weight: 600;
       line-height: 1;
     }
     h3{
       line-height: 1;
       color: @white;
+      font-size: 3rem;
+      font-family: @font-sans;
+      margin-bottom: 10px;
+      font-weight: bold;
     }
     .button{
       border: 0;

@@ -1,10 +1,11 @@
 @import 'lesshat';
 //@import '../../../../../../node_modules/flex-less/flex.less';
-@import 'node_modules/flex-less/flex';
+//@import 'node_modules/flex-less/flex';
 
 /* Import Fonts
 ------------------------------------------------------------ */
-@import url(//fonts.googleapis.com/css?family=Allura|Raleway:400,200,700);
+//@import url(//fonts.googleapis.com/css?family=Allura|Raleway:400,200,700);
+@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans); //Italianno|Rouge+Script
 
 /* Font Stacks */
 .customserif(@size:1.6) {
@@ -15,15 +16,15 @@
   line-height: 1.625;
 }
 .custombody(@size:1.6) {
-  font-family: "Raleway","Helvetica Neue", "Trebuchet MS", Calibri, sans-serif;
-  font-weight: 400;
+  font-family: @font-sans; //"Raleway","Helvetica Neue", "Trebuchet MS", Calibri, sans-serif;
+  font-weight: bold;
   font-size: unit((@size*10),px);
   font-size: unit(@size,rem);
   line-height: 1.625;
 }
 
 .customheader(@size:1.6) {
-  font-family: "Raleway","Trebuchet MS", Calibri, sans-serif;
+  font-family: @font-cursive; //"Raleway","Trebuchet MS", Calibri, sans-serif;
   font-weight: 400;
   font-size: unit((@size*10),px);
   font-size: unit(@size,rem);
@@ -45,6 +46,15 @@
   font-family: "FontAwesome";
 }
 
+@font-cursive: "Tangerine";
+@font-sans: "Nunito Sans", sans-serif;
+
+@mobile: ~"(max-width: 479px)";
+@mobile-xl: ~"(min-width: 480px)";
+@tablet: ~"(min-width: 768px)";
+@tablet-max: ~"(max-width: 1023px)";
+@desktop: ~"(min-width: 1024px)";
+@desktop-xl: ~"(min-width: 1440px)";
 
 /* Colors */
 @primaryGreen: #004843;

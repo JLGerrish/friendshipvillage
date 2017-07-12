@@ -27,22 +27,6 @@ jQuery(document).ready(function($) {
             //$(this).next('.ginput_container').find('select option.first-child').html(placeholder.replace(/(<([^>]+)>)/ig,""));
         }
 	});
-	
-	if($( window ).width() > 480){
-        var preheaderheight = $(".pre-header").outerHeight();
-        var headerheight = $(".site-header").outerHeight();
-        var hpTopHeight = $(".hp-top").outerHeight();
-
-        $(".pre-header").css({position: "fixed", top: 0});
-        $(".site-header").css({position: "fixed", top: preheaderheight+"px"});
-        $(".hp-top").css({position: "fixed", top: preheaderheight+headerheight+"px"});
-        $(".page-title-area").css({marginTop: preheaderheight+headerheight+hpTopHeight+"px" })
-        //$(".pre-header").sticky();
-        //$(".site-header").sticky({topSpacing:preheaderheight});
-        //$(".notification-bar").sticky({topSpacing:headerheight});
-    } else {
-        $(".site-header").sticky();
-    }
     
     $(window).scroll(function() {
        if($(window).scrollTop() == 0) {
@@ -69,4 +53,27 @@ jQuery(document).ready(function($) {
         }
     });
 
+    function windowResizeHandler() {
+        if($( window ).width() >= 768){
+            var preheaderheight = $(".pre-header").outerHeight();
+            var headerheight = $(".site-header").outerHeight();
+            var hpTopHeight = $(".hp-top").outerHeight();
+
+            $(".pre-header").css({position: "fixed", top: 0});
+            $(".site-header").css({position: "fixed", top: preheaderheight+"px"});
+            $(".hp-top").css({position: "fixed", top: preheaderheight+headerheight+"px"});
+            //$(".page-title-area").css({marginTop: preheaderheight+headerheight+hpTopHeight+"px" })
+            //$(".pre-header").sticky();
+            //$(".site-header").sticky({topSpacing:preheaderheight});
+            //$(".notification-bar").sticky({topSpacing:headerheight});
+        } else {
+            //$(".site-header").sticky();
+            $(".pre-header").css({position: "", top: ""});
+            $(".site-header").css({position: "", top: ""});
+            $(".hp-top").css({position: "", top: ""});
+        }
+    }
+
+    windowResizeHandler();
+    $(window).on('resize', windowResizeHandler);
 });

@@ -179,6 +179,8 @@ function msdlab_do_nav() {
         $class .= ' js-superfish';
     }
 
+    print '<div id="mobile-menu-open"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i><span>Menu</span></a></div>';
+
     genesis_nav_menu( array(
         'theme_location' => 'primary',
         'menu_class'     => $class,
