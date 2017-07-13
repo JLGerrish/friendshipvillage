@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
     $('#homepage-widgets section.widget').addClass('col-sm-'+cols);
     $('#homepage-widgets section.widget').addClass('col-xs-12');
 
-    function windowResizeHandler() {
+    /*function windowResizeHandler() {
         var preheaderheight = $(".pre-header").outerHeight();
         var headerheight = $(".site-header").outerHeight();
         if($( window ).width() >= 768){
@@ -17,5 +17,5 @@ jQuery(document).ready(function($) {
     }
 
     windowResizeHandler();
-    $(window).on('resize', windowResizeHandler);
+    $(window).on('resize', windowResizeHandler);*/
 });

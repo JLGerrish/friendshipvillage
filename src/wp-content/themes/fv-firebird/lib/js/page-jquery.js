@@ -9,9 +9,9 @@ jQuery(document).ready(function($) {
     var controller = new ScrollMagic({globalSceneOptions: {triggerHook: "onEnter", duration: $(window).height()*2}});
 
     // build scenes
-    new ScrollScene()
+    /*new ScrollScene()
         .setTween(TweenMax.fromTo("#page-title-area .banner", 1, {css:{'background-position':"50% 40%"}, ease: Linear.easeNone}, {css:{'background-position':"50% -40%"}, ease: Linear.easeNone}))
-        .addTo(controller);
+        .addTo(controller);*/
     //do some nifty stuff for the menu
     $('.widget_advanced_menu .menu>li>.sub-menu>li.current-menu-item,.widget_advanced_menu .menu>li>.sub-menu>li.current-menu-ancestor').addClass('open');
     $('.widget_advanced_menu .menu>li>.sub-menu>li').prepend(function(){

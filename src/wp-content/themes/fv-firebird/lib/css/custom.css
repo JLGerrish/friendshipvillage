@@ -15,38 +15,39 @@
 }
 /* Colors */
 /* Neutrals */
+.mobile-padding {
+  padding: 0 1.5rem;
+}
 /* Arrows */
 /* Buttons */
 .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 .button:hover,
 .button a:hover {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
@@ -70,22 +71,90 @@
   background: #FFF;
 }
 .page-title-area .banner {
-  background-image: url(../img/pg_bkg_lifestyle.jpg);
+  background-image: url(../img/banner.jpg);
+  padding-top: 88.125%;
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .page-title-area .banner {
+    padding-top: 26.35529608%;
+    background-position: center center;
+  }
+}
+.page-title-area .banner .texturize,
+.page-title-area .banner .gradient,
+.page-title-area .banner .wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+.page-title-area .banner .texturize .wrap,
+.page-title-area .banner .gradient .wrap,
+.page-title-area .banner .wrap .wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+@media (min-width: 1024px) {
+  .page-title-area .banner .texturize .wrap,
+  .page-title-area .banner .gradient .wrap,
+  .page-title-area .banner .wrap .wrap {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.page-title-area .banner .section-title {
+  padding: 0;
+  color: #004843;
 }
 .section-title {
-  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: left;
   text-shadow: 0 0 8px #888888;
   background: rgba(255, 255, 255, 0);
   display: block;
-  font-family: "Allura", cursive;
-  font-weight: 400;
-  font-size: 80px;
-  font-size: 8rem;
-  line-height: 1;
+  font-family: "Tangerine";
+  font-size: 6.25rem;
   padding: 1em 0;
   color: #FFF;
+}
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 8.7rem;
+  }
 }
 .section-title a,
 .section-title a:visited {
@@ -97,19 +166,17 @@
   opacity: 1;
 }
 .sidebar.sidebar-primary .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #FFF;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(0, 152, 178, 0);
-  border: 2px solid #FFF;
-  border-radius: 6px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: #0098B2;
 }
 .sidebar.sidebar-primary .button:hover {
@@ -139,19 +206,17 @@
   line-height: 1;
 }
 .sidebar.sidebar-primary section.widget.widget_text .widget-wrap .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #888888;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0);
-  border: 2px solid #888888;
-  border-radius: 6px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: #FFF;
   font-size: 14px;
   width: 98%;
@@ -161,6 +226,8 @@
   z-index: 90;
   color: #363636;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   .text-sizer {
@@ -184,7 +251,7 @@
 .text-sizer div i {
   margin-left: 0.5em;
   padding: 0.5em;
-  color: #888888;
+  color: #004843;
   cursor: pointer;
 }
 .msd-fa.block,

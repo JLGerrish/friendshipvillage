@@ -245,6 +245,7 @@ function msdlab_maybe_move_title(){
         //remove_action('genesis_entry_header','genesis_do_post_title'); //move the title out of the content area
         add_action('msdlab_title_area','msdlab_do_section_title');
         add_action('genesis_after_header','msdlab_do_title_area');
+        add_action('wp_head', 'msdlab_do_section_title_styles');
     }
 }
  
@@ -276,8 +277,16 @@ function msdlab_do_section_title(){
             //$lvl = 2;
             $myid = get_topmost_parent($post->ID);
         }
-        $background = strlen(msdlab_get_thumbnail_url($myid,'full'))>0?' style="background-image:url('.msdlab_get_thumbnail_url($myid,'full').')"':'';
-        print '<div class="banner clearfix"'.$background.'>';
+
+        // mobile thumb id relies on plugin: Mobile Featured Image (https://wordpress.org/plugins/mobile-featured-image/)
+        /*$mobile_thumb_id = get_post_meta( $myid, 'mobileimg-mobile-thumbnail_id', true );
+        $background = '';//strlen(msdlab_get_thumbnail_url($myid,'full'))>0?' style="background-image:url('.msdlab_get_thumbnail_url($myid,'full').')"':'';
+        print '<style>#banner-'.$myid.'{background-image:url('.msdlab_get_thumbnail_url($myid,'full').');}';
+        if ($mobile_thumb_id !== '') {       
+            print '@media (max-width: 767px) {#banner-'.$myid.'{background-image:url('.wp_get_attachment_image_url($mobile_thumb_id,'full').');}}';
+        }
+        print '</style>';*/
+        print '<div id="banner-'.$myid.'" class="banner clearfix">';
         print '<div class="texturize">';
         print '<div class="gradient">';
         print '<div class="wrap">';
@@ -291,8 +300,8 @@ function msdlab_do_section_title(){
     } elseif(is_home() || is_single()) {
         $blog_home = get_post(get_option( 'page_for_posts' ));
         $title = apply_filters( 'genesis_post_title_text', $blog_home->post_title );//* Wrap in H1 on singular pages
-        $background = strlen(msdlab_get_thumbnail_url($myid,'full'))>0?' style="background-image:url('.msdlab_get_thumbnail_url($blog_home->ID,'full').')"':'';
-        print '<div class="banner clearfix"'.$background.'>';
+        //$background = strlen(msdlab_get_thumbnail_url($myid,'full'))>0?' style="background-image:url('.msdlab_get_thumbnail_url($blog_home->ID,'full').')"':'';
+        print '<div class="banner clearfix">';
         print '<div class="texturize">';
         print '<div class="gradient">';
         print '<div class="wrap">';
@@ -306,6 +315,27 @@ function msdlab_do_section_title(){
     } else {
         genesis_do_post_title();
     }
+}
+
+function msdlab_do_section_title_styles()
+{
+    global $post;
+    $myid = $post->ID;
+    $lvl = 2;
+    if(get_section_title()!=$post->post_title){
+        //add_action('genesis_entry_header','genesis_do_post_title',5);
+        //$lvl = 2;
+        $myid = get_topmost_parent($post->ID);
+    }
+
+    // mobile thumb id relies on plugin: Mobile Featured Image (https://wordpress.org/plugins/mobile-featured-image/)
+    $mobile_thumb_id = get_post_meta( $myid, 'mobileimg-mobile-thumbnail_id', true );
+
+    echo '<style>#banner-'.$myid.'{background-image:url('.msdlab_get_thumbnail_url($myid,'full').');}';
+    if ($mobile_thumb_id !== '') {       
+        echo '@media (max-width: 767px) {#banner-'.$myid.'{background-image:url('.wp_get_attachment_image_url($mobile_thumb_id,'full').');}}';
+    }
+    echo '</style>';
 }
 
 

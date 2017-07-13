@@ -6245,22 +6245,24 @@ you can use the generic selector below, but it's slower:
 }
 /* Colors */
 /* Neutrals */
+.mobile-padding {
+  padding: 0 1.5rem;
+}
 /* Arrows */
 /* Buttons */
 .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -6269,19 +6271,18 @@ you can use the generic selector below, but it's slower:
 }
 .button:hover,
 .button a:hover {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
@@ -6424,8 +6425,7 @@ h2 {
   font-size: 3rem;
 }
 h3 {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 2.9rem;
   line-height: 1.2;
   font-family: serif;
   text-transform: uppercase;
@@ -6501,19 +6501,18 @@ input[type="reset"],
 input[type="submit"],
 .button,
 .entry-content .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -6526,19 +6525,18 @@ input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover,
 .entry-content .button:hover {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(66, 186, 220, 0.4);
 }
 .entry-content .button:hover {
@@ -6719,9 +6717,14 @@ img.alignright,
 --------------------------------------------- */
 .breadcrumb {
   margin-bottom: 0;
-  font-size: 1.2rem;
   background: none;
-  color: #888888;
+  text-align: center;
+  padding: 0 0 1rem 0;
+}
+@media (min-width: 1024px) {
+  .breadcrumb {
+    text-align: left;
+  }
 }
 .archive-description,
 .author-box {
@@ -6958,19 +6961,18 @@ img#wpstats {
 }
 .job-manager-application-wrapper .application .application_button,
 .single_job_listing .application .application_button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -7035,6 +7037,7 @@ Site Header
   font-size: 0;
   width: 100%;
   border-bottom: 1px solid #292929;
+  box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 479px) {
   .site-header {
@@ -7222,11 +7225,6 @@ Site Navigation
 ---------------------------------------------------------------------------------------------------- */
 .genesis-nav-menu {
   clear: both;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
   line-height: 1.5;
   width: 100%;
 }
@@ -7364,7 +7362,7 @@ Site Navigation
 }
 #mobile-menu-open a span {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -7674,7 +7672,7 @@ main.content {
 }
 @media (min-width: 1024px) {
   main.content {
-    padding: 6rem 0 2rem 2rem;
+    padding: 1rem 0 2rem 5rem;
   }
 }
 /* Entries
@@ -7811,20 +7809,18 @@ article.entry {
   display: block;
 }
 .entry-header .entry-title {
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 43.5px;
-  font-size: 4.35rem;
-  line-height: 1.625;
+  font-size: 3rem;
+  font-family: serif;
   font-weight: bold;
   color: #004843;
   line-height: 1.25;
   margin: 0 0 2rem 0;
   text-align: left;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .entry-header .entry-title {
-    font-size: 6rem;
+    font-size: 4rem;
     max-width: 75%;
   }
 }
@@ -8037,19 +8033,18 @@ Sidebars
   /*Text Widget with Click */
 }
 .sidebar .widget_text .textwidget .readmore {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -8237,7 +8232,7 @@ Site Footer
   margin-bottom: 0;
 }
 .site-footer .wrap div.icons {
-  display: inline-block;
+  display: block;
   position: relative;
 }
 .site-footer .wrap div.icons i.icon {
@@ -8273,10 +8268,12 @@ Site Footer
   background-position: right center;
   font-style: normal;
   line-height: 3;
-  max-height: 30px;
+  height: auto;
   text-align: left;
-  top: 7px;
-  width: 290px;
+  margin-top: 7px;
+  max-width: 290px;
+  width: 100%;
+  padding-top: 8.86524823%;
 }
 .site-footer .wrap .backtotop {
   position: absolute;
@@ -8292,6 +8289,9 @@ Site Footer
   color: #FCB040;
   font-size: 2em;
   line-height: 1;
+}
+.site-footer .row {
+  margin: 0;
 }
 .page-template-page-sectioned .site-container .site-inner {
   background: transparent;
@@ -8542,22 +8542,90 @@ Site Footer
   background: #FFF;
 }
 .page-title-area .banner {
-  background-image: url(../img/pg_bkg_lifestyle.jpg);
+  background-image: url(../img/banner.jpg);
+  padding-top: 88.125%;
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .page-title-area .banner {
+    padding-top: 26.35529608%;
+    background-position: center center;
+  }
+}
+.page-title-area .banner .texturize,
+.page-title-area .banner .gradient,
+.page-title-area .banner .wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+.page-title-area .banner .texturize .wrap,
+.page-title-area .banner .gradient .wrap,
+.page-title-area .banner .wrap .wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+@media (min-width: 1024px) {
+  .page-title-area .banner .texturize .wrap,
+  .page-title-area .banner .gradient .wrap,
+  .page-title-area .banner .wrap .wrap {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.page-title-area .banner .section-title {
+  padding: 0;
+  color: #004843;
 }
 .section-title {
-  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: left;
   text-shadow: 0 0 8px #888888;
   background: rgba(255, 255, 255, 0);
   display: block;
-  font-family: "Allura", cursive;
-  font-weight: 400;
-  font-size: 80px;
-  font-size: 8rem;
-  line-height: 1;
+  font-family: "Tangerine";
+  font-size: 6.25rem;
   padding: 1em 0;
   color: #FFF;
+}
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 8.7rem;
+  }
 }
 .section-title a,
 .section-title a:visited {
@@ -8569,19 +8637,17 @@ Site Footer
   opacity: 1;
 }
 .sidebar.sidebar-primary .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #FFF;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(0, 152, 178, 0);
-  border: 2px solid #FFF;
-  border-radius: 6px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: #0098B2;
 }
 .sidebar.sidebar-primary .button:hover {
@@ -8611,19 +8677,17 @@ Site Footer
   line-height: 1;
 }
 .sidebar.sidebar-primary section.widget.widget_text .widget-wrap .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #888888;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0);
-  border: 2px solid #888888;
-  border-radius: 6px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: #FFF;
   font-size: 14px;
   width: 98%;
@@ -8633,6 +8697,8 @@ Site Footer
   z-index: 90;
   color: #363636;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   .text-sizer {
@@ -8656,7 +8722,7 @@ Site Footer
 .text-sizer div i {
   margin-left: 0.5em;
   padding: 0.5em;
-  color: #888888;
+  color: #004843;
   cursor: pointer;
 }
 .msd-fa.block,
@@ -8749,9 +8815,6 @@ Site Footer
 }
 @media only screen and (max-width: 980px) {
   /* Enter Your Custom Styles Here */
-  .section-title {
-    font-size: 7vw;
-  }
   .site-inner {
     background-image: none;
   }
@@ -8920,7 +8983,8 @@ Site Footer
 @media only screen and (max-width: 322px) {
   /* Enter Your Custom Styles Here */
   .site-footer .wrap div.icons i.logo-lcs {
-    top: 2em;
+    margin-top: 2em;
+    margin-bottom: 0;
   }
 }
 

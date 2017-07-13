@@ -92,9 +92,14 @@ img.alignright,
 
 .breadcrumb {
   margin-bottom: 0;
-  font-size: 1.2rem;
+  //font-size: 1.2rem;
   background: none;
-  color: @medgrey;
+  text-align: center;
+  padding: 0 0 1rem 0;
+
+  @media @desktop {
+    text-align: left;
+  }
 }
 
 .archive-description,

@@ -54,16 +54,17 @@ jQuery(document).ready(function($) {
     });
 
     function windowResizeHandler() {
-        if($( window ).width() >= 768){
-            var preheaderheight = $(".pre-header").outerHeight();
-            var headerheight = $(".site-header").outerHeight();
-            var hpTopHeight = $(".hp-top").outerHeight();
+        var preheaderheight = $(".pre-header").outerHeight();
+        var headerheight = $(".site-header").outerHeight();
+        var hpTopHeight = $(".hp-top").outerHeight();
 
+        if($( window ).width() >= 768){
             $(".pre-header").css({position: "fixed", top: 0});
             $(".site-header").css({position: "fixed", top: preheaderheight+"px"});
             $(".hp-top").css({position: "fixed", top: preheaderheight+headerheight+"px"});
-            if ($('article.first-child').find('.text-sizer').length <= 0) {
-                $('article.first-child').prepend('<div class="text-sizer"><div>Text Size <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
+            $(".site-container").css({marginTop: preheaderheight + headerheight + "px"});
+            if ($('article:first-of-type').find('.text-sizer').length <= 0) {
+                $('article:first-of-type').prepend('<div class="text-sizer"><div>Text Size: <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
                 $('#page-title-area').next('.text-sizer').remove();
             }
             
@@ -76,9 +77,10 @@ jQuery(document).ready(function($) {
             $(".pre-header").css({position: "", top: ""});
             $(".site-header").css({position: "fixed", top: 0});
             $(".hp-top").css({position: "", top: ""});
+            $(".site-container").css({marginTop: headerheight + "px"});
             if ( $('#page-title-area').next('.text-sizer').length <= 0) {
-                $('#page-title-area').after('<div class="text-sizer"><div>Text Size <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
-                $('article.first-child').find('.text-sizer').remove();
+                $('#page-title-area').after('<div class="text-sizer"><div>Text Size: <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
+                $('article:first-of-type').find('.text-sizer').remove();
             }
         }
     }

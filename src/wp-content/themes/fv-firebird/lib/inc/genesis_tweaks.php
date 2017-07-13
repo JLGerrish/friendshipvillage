@@ -63,7 +63,7 @@ add_action('template_redirect','msdlab_maybe_move_title');
     //add_action('msdlab_title_area','msdlab_do_section_title');
     //add_action('genesis_after_header','msdlab_do_title_area');
 
-add_action('genesis_after_header', 'genesis_do_breadcrumbs'); //to outside of the loop area
+add_action('genesis_before_loop', 'genesis_do_breadcrumbs'); //to outside of the loop area
 //add_action('genesis_before_entry','msd_post_image');//add the image above the entry
 //add_action('genesis_entry_header','msdlab_project_gallery',-5);//add the image above the entry
 

@@ -15,38 +15,39 @@
 }
 /* Colors */
 /* Neutrals */
+.mobile-padding {
+  padding: 0 1.5rem;
+}
 /* Arrows */
 /* Buttons */
 .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 .button:hover,
 .button a:hover {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
@@ -62,11 +63,6 @@ Site Navigation
 ---------------------------------------------------------------------------------------------------- */
 .genesis-nav-menu {
   clear: both;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
   line-height: 1.5;
   width: 100%;
 }
@@ -204,7 +200,7 @@ Site Navigation
 }
 #mobile-menu-open a span {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
 }

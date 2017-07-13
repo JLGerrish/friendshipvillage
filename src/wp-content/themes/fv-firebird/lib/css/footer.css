@@ -15,38 +15,39 @@
 }
 /* Colors */
 /* Neutrals */
+.mobile-padding {
+  padding: 0 1.5rem;
+}
 /* Arrows */
 /* Buttons */
 .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 .button:hover,
 .button a:hover {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
@@ -84,7 +85,7 @@ Site Footer
   margin-bottom: 0;
 }
 .site-footer .wrap div.icons {
-  display: inline-block;
+  display: block;
   position: relative;
 }
 .site-footer .wrap div.icons i.icon {
@@ -120,10 +121,12 @@ Site Footer
   background-position: right center;
   font-style: normal;
   line-height: 3;
-  max-height: 30px;
+  height: auto;
   text-align: left;
-  top: 7px;
-  width: 290px;
+  margin-top: 7px;
+  max-width: 290px;
+  width: 100%;
+  padding-top: 8.86524823%;
 }
 .site-footer .wrap .backtotop {
   position: absolute;
@@ -139,6 +142,9 @@ Site Footer
   color: #FCB040;
   font-size: 2em;
   line-height: 1;
+}
+.site-footer .row {
+  margin: 0;
 }
 
 /*# sourceMappingURL=footer.css.map */

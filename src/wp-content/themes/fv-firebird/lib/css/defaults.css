@@ -15,22 +15,24 @@
 }
 /* Colors */
 /* Neutrals */
+.mobile-padding {
+  padding: 0 1.5rem;
+}
 /* Arrows */
 /* Buttons */
 .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -39,19 +41,18 @@
 }
 .button:hover,
 .button a:hover {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
@@ -194,8 +195,7 @@ h2 {
   font-size: 3rem;
 }
 h3 {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 2.9rem;
   line-height: 1.2;
   font-family: serif;
   text-transform: uppercase;
@@ -271,19 +271,18 @@ input[type="reset"],
 input[type="submit"],
 .button,
 .entry-content .button {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -296,19 +295,18 @@ input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover,
 .entry-content .button:hover {
-  padding: 6px 24px;
+  padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #42badc;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1;
   display: table;
-  margin: 12px auto;
+  margin: 1.2rem auto;
   text-decoration: none;
-  background-color: rgba(66, 186, 220, 0);
-  border: 2px solid #42badc;
-  border-radius: 6px;
+  background-color: #42badc;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   background-color: rgba(66, 186, 220, 0.4);
 }
 .entry-content .button:hover {

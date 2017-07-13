@@ -14,23 +14,72 @@
 .page-title-area{
   background: @white;
   .banner{
-    background-image: url(../img/pg_bkg_lifestyle.jpg);
+    background-image: url(../img/banner.jpg);
+    padding-top: 564/640*100%;
+    background-position: right center;
     background-repeat: no-repeat;
     background-size: cover;
-    .texturize{
-      .gradient{
+    position: relative;
+
+    @media @desktop {
+      padding-top: 316/1199*100%;
+      background-position: center center;
+    }
+
+      .texturize,
+      .gradient,
+      .wrap{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        .mobile-padding;
+
+        .wrap {
+          .display(flex);
+          .align-items(flex-end);
+          //.justify-content(center);
+
+          @media @desktop {
+            .align-items(center);
+          }
+        }
       }
+
+    .section-title{ 
+      padding: 0;
+      color: @primaryGreen;
     }
   }
 }
 .section-title{
-  text-align: center;
+  //position: absolute;
+  //left: 0;
+  //top: 0;
+  //width: 100%;
+  //height: 100%;
+  .display(flex);
+  .align-items(center);
+  .justify-content(center);
+
+  text-align: left;
   text-shadow: 0 0 8px @medgrey;
   background: fade(@white,0%);
   display: block;
-  .script(8);
+  //.script(8);
+  font-family: @font-cursive;
+  font-size: 6.25rem;
   padding: 1em 0;
   color: @white;
+
+  @media @desktop {
+    font-size: 8.7rem;
+  }
+
   a, a:visited {
     color: @white;
     opacity: 0.5;
@@ -84,6 +133,8 @@
   z-index: 90;
   color: #363636;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
 
   @media @tablet {
     text-align: right;
@@ -101,11 +152,11 @@
       border: 1px solid @ltgrey;
       background: fade(@white,80%);
     }
-    
+
     i{
       margin-left: 0.5em;
       padding: 0.5em;
-      color: @medgrey;
+      color: @primaryGreen;
       cursor: pointer;
     }
   }
