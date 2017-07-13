@@ -19,41 +19,35 @@
 /* Buttons */
 .button {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
 }
 .button:hover,
 .button a:hover {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
-  background-color: rgba(252, 176, 64, 0.4);
+  background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
 .msd-clearfix {
@@ -162,6 +156,11 @@ Site Navigation
 }
 /* Primary Navigation
 --------------------------------------------- */
+@media (max-width: 1023px) {
+  body.nav-open {
+    position: fixed;
+  }
+}
 #mobile-menu-open {
   display: inline-block;
   position: absolute;
@@ -210,13 +209,20 @@ Site Navigation
   text-transform: uppercase;
 }
 @media (max-width: 1023px) {
-  #menu-topnav {
+  .nav-primary .wrap {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    height: 100vh;
+  }
+}
+@media (max-width: 1023px) {
+  #menu-topnav {
     background: #FFF;
     color: #FFF;
     font-size: 1.6rem;
@@ -230,18 +236,13 @@ Site Navigation
   #menu-topnav li.current-menu-ancestor a {
     background: rgba(0, 72, 67, 0.8);
   }
-  #menu-topnav li.menu-item-has-children {
-    /*> a:after{
-          .fontawesome;
-          content: '\f0da';
-          margin: 0 0.5em;
-          position: absolute;
-          right: 0;
-        }*/
+  #menu-topnav li.menu-item-has-children > a:after {
+    content: none;
   }
   #menu-topnav li.menu-item-has-children .toggle {
     position: absolute;
     right: 0;
+    padding: 0 1rem;
   }
   #menu-topnav li a {
     color: #FFF;
@@ -251,6 +252,10 @@ Site Navigation
   #menu-topnav .sub-menu {
     width: 100%;
     background: #004843;
+    position: relative;
+    left: auto;
+    display: none;
+    opacity: 1;
   }
 }
 @media (min-width: 1024px) {
@@ -260,17 +265,18 @@ Site Navigation
   }
 }
 .nav-primary {
-  display: inline-block;
   width: 100%;
   text-align: right;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .nav-primary {
     width: 80%;
+    display: inline-block;
   }
 }
 .nav-primary li.menu-item a {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", "sans-serif";
   font-size: 1.6rem;
   padding: 1em .75em;
   color: #2c363f;
@@ -359,8 +365,7 @@ Site Navigation
   position: relative;
 }
 .nav-secondary .wrap li.menu-item > a {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
+  font-family: "Nunito Sans", "sans-serif";
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.625;

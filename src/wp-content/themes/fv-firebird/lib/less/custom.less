@@ -82,14 +82,26 @@
 .text-sizer{
   display: block;
   z-index: 90;
-  color: @medgrey;
-  text-align: right;
+  color: #363636;
+  text-align: center;
+
+  @media @tablet {
+    text-align: right;
+    background: none;
+    color: @medgrey;
+  }
+
   div{
-    border: 1px solid @ltgrey;
-    background: fade(@white,80%);
+    background: #f0f0f0;
     width: auto;
     padding: 0.5em 1em;
-    float: right;
+
+    @media @tablet {
+      float: right;
+      border: 1px solid @ltgrey;
+      background: fade(@white,80%);
+    }
+    
     i{
       margin-left: 0.5em;
       padding: 0.5em;

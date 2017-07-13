@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
        }
     });
     //add element to page
-    $('article.first-child').prepend('<div class="text-sizer"><div>Font Size <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
+    
     //$('.text-sizer').sticky({topSpacing:210});
     var size = parseInt($('html').css('font-size'));
     $('.text-sizer .plus').click(function(){
@@ -62,6 +62,11 @@ jQuery(document).ready(function($) {
             $(".pre-header").css({position: "fixed", top: 0});
             $(".site-header").css({position: "fixed", top: preheaderheight+"px"});
             $(".hp-top").css({position: "fixed", top: preheaderheight+headerheight+"px"});
+            if ($('article.first-child').find('.text-sizer').length <= 0) {
+                $('article.first-child').prepend('<div class="text-sizer"><div>Text Size <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
+                $('#page-title-area').next('.text-sizer').remove();
+            }
+            
             //$(".page-title-area").css({marginTop: preheaderheight+headerheight+hpTopHeight+"px" })
             //$(".pre-header").sticky();
             //$(".site-header").sticky({topSpacing:preheaderheight});
@@ -69,8 +74,12 @@ jQuery(document).ready(function($) {
         } else {
             //$(".site-header").sticky();
             $(".pre-header").css({position: "", top: ""});
-            $(".site-header").css({position: "", top: ""});
+            $(".site-header").css({position: "fixed", top: 0});
             $(".hp-top").css({position: "", top: ""});
+            if ( $('#page-title-area').next('.text-sizer').length <= 0) {
+                $('#page-title-area').after('<div class="text-sizer"><div>Text Size <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
+                $('article.first-child').find('.text-sizer').remove();
+            }
         }
     }
 

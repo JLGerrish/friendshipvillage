@@ -17,7 +17,6 @@
 }
 .custombody(@size:1.6) {
   font-family: @font-sans; //"Raleway","Helvetica Neue", "Trebuchet MS", Calibri, sans-serif;
-  font-weight: bold;
   font-size: unit((@size*10),px);
   font-size: unit(@size,rem);
   line-height: 1.625;
@@ -47,7 +46,8 @@
 }
 
 @font-cursive: "Tangerine";
-@font-sans: "Nunito Sans", sans-serif;
+@font-sans: "Nunito Sans", "sans-serif";
+@font-serif: serif;
 
 @mobile: ~"(max-width: 479px)";
 @mobile-xl: ~"(min-width: 480px)";
@@ -228,9 +228,11 @@
 
 
 /* Buttons */
-.button(@background:@orange,@color:@orange) {
+.button(@background:@highlightBlue,@color:@highlightBlue) {
   padding: 6px 24px;
-  .customsanserif;
+  //.customsanserif;
+  font-family: @font-sans;
+  font-weight: bold;
   color: @color;
   font-size: 12px;
   font-weight: 700;
@@ -247,7 +249,7 @@
   .button();
 }
 
-.button-hover(@background:@orange,@color:@orange) {
+.button-hover(@background:@highlightBlue,@color:@highlightBlue) {
   .button(@background,@color);
   background-color: fade(@background,40%);
 }

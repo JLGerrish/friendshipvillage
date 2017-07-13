@@ -19,41 +19,35 @@
 /* Buttons */
 .button {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
 }
 .button:hover,
 .button a:hover {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
-  background-color: rgba(252, 176, 64, 0.4);
+  background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
 .msd-clearfix {
@@ -91,8 +85,7 @@ Sidebars
   border-radius: 0px;
 }
 .sidebar .widget .widget-title {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
+  font-family: "Nunito Sans", "sans-serif";
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 1.625;
@@ -106,20 +99,17 @@ Sidebars
 }
 .sidebar .widget_text .textwidget .readmore {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
   float: right;
 }

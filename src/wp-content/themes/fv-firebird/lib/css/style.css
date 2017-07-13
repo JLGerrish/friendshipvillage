@@ -6249,20 +6249,17 @@ you can use the generic selector below, but it's slower:
 /* Buttons */
 .button {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -6273,22 +6270,19 @@ you can use the generic selector below, but it's slower:
 .button:hover,
 .button a:hover {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
-  background-color: rgba(252, 176, 64, 0.4);
+  background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
 .msd-clearfix {
@@ -6310,11 +6304,16 @@ html {
 body {
   background-color: #FFF;
   color: #2D2D2D;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-family: "Nunito Sans", "sans-serif";
+  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.625;
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
 }
 a,
 button,
@@ -6405,7 +6404,6 @@ address {
 --------------------------------------------- */
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -6415,8 +6413,7 @@ h6 {
   font-size: 1.6rem;
   line-height: 1.625;
   line-height: 1.2;
-  margin: 0 0 16px;
-  margin: 0 0 1.6rem;
+  margin: 0 0 .12em;
 }
 h1 {
   font-size: 36px;
@@ -6429,6 +6426,9 @@ h2 {
 h3 {
   font-size: 24px;
   font-size: 2.4rem;
+  line-height: 1.2;
+  font-family: serif;
+  text-transform: uppercase;
 }
 h4 {
   font-size: 20px;
@@ -6502,20 +6502,17 @@ input[type="submit"],
 .button,
 .entry-content .button {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -6530,22 +6527,19 @@ input:hover[type="submit"],
 .button:hover,
 .entry-content .button:hover {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
-  background-color: rgba(252, 176, 64, 0.4);
+  background-color: rgba(66, 186, 220, 0.4);
 }
 .entry-content .button:hover {
   color: #FFF;
@@ -6744,8 +6738,7 @@ img.alignright,
   padding: 4rem;
 }
 .author-box-title {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
+  font-family: "Nunito Sans", "sans-serif";
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.625;
@@ -6966,20 +6959,17 @@ img#wpstats {
 .job-manager-application-wrapper .application .application_button,
 .single_job_listing .application .application_button {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -6999,6 +6989,7 @@ img#wpstats {
 }
 @media (min-width: 1024px) {
   .pre-header {
+    display: block;
     background-color: #004843;
     color: #FFF;
     z-index: 300;
@@ -7325,6 +7316,11 @@ Site Navigation
 }
 /* Primary Navigation
 --------------------------------------------- */
+@media (max-width: 1023px) {
+  body.nav-open {
+    position: fixed;
+  }
+}
 #mobile-menu-open {
   display: inline-block;
   position: absolute;
@@ -7373,13 +7369,20 @@ Site Navigation
   text-transform: uppercase;
 }
 @media (max-width: 1023px) {
-  #menu-topnav {
+  .nav-primary .wrap {
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    height: 100vh;
+  }
+}
+@media (max-width: 1023px) {
+  #menu-topnav {
     background: #FFF;
     color: #FFF;
     font-size: 1.6rem;
@@ -7393,18 +7396,13 @@ Site Navigation
   #menu-topnav li.current-menu-ancestor a {
     background: rgba(0, 72, 67, 0.8);
   }
-  #menu-topnav li.menu-item-has-children {
-    /*> a:after{
-          .fontawesome;
-          content: '\f0da';
-          margin: 0 0.5em;
-          position: absolute;
-          right: 0;
-        }*/
+  #menu-topnav li.menu-item-has-children > a:after {
+    content: none;
   }
   #menu-topnav li.menu-item-has-children .toggle {
     position: absolute;
     right: 0;
+    padding: 0 1rem;
   }
   #menu-topnav li a {
     color: #FFF;
@@ -7414,6 +7412,10 @@ Site Navigation
   #menu-topnav .sub-menu {
     width: 100%;
     background: #004843;
+    position: relative;
+    left: auto;
+    display: none;
+    opacity: 1;
   }
 }
 @media (min-width: 1024px) {
@@ -7423,17 +7425,18 @@ Site Navigation
   }
 }
 .nav-primary {
-  display: inline-block;
   width: 100%;
   text-align: right;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .nav-primary {
     width: 80%;
+    display: inline-block;
   }
 }
 .nav-primary li.menu-item a {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", "sans-serif";
   font-size: 1.6rem;
   padding: 1em .75em;
   color: #2c363f;
@@ -7522,8 +7525,7 @@ Site Navigation
   position: relative;
 }
 .nav-secondary .wrap li.menu-item > a {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
+  font-family: "Nunito Sans", "sans-serif";
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.625;
@@ -7668,7 +7670,12 @@ Site Navigation
 Content Area
 ---------------------------------------------------------------------------------------------------- */
 main.content {
-  padding: 6rem 0 2rem 2rem;
+  padding: 1rem 0;
+}
+@media (min-width: 1024px) {
+  main.content {
+    padding: 6rem 0 2rem 2rem;
+  }
 }
 /* Entries
 --------------------------------------------- */
@@ -7806,15 +7813,20 @@ article.entry {
 .entry-header .entry-title {
   font-family: "Tangerine";
   font-weight: 400;
-  font-size: 60px;
-  font-size: 6rem;
+  font-size: 43.5px;
+  font-size: 4.35rem;
   line-height: 1.625;
   font-weight: bold;
   color: #004843;
   line-height: 1.25;
   margin: 0 0 2rem 0;
   text-align: left;
-  max-width: 75%;
+}
+@media (min-width: 768px) {
+  .entry-header .entry-title {
+    font-size: 6rem;
+    max-width: 75%;
+  }
 }
 .entry-header .entry-subtitle {
   font-family: "Tangerine";
@@ -8012,8 +8024,7 @@ Sidebars
   border-radius: 0px;
 }
 .sidebar .widget .widget-title {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
+  font-family: "Nunito Sans", "sans-serif";
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 1.625;
@@ -8027,20 +8038,17 @@ Sidebars
 }
 .sidebar .widget_text .textwidget .readmore {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -8318,22 +8326,12 @@ Site Footer
   margin-bottom: 2rem;
 }
 .sectioned-page-wrapper .section h3 {
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 1.625;
   font-weight: 700;
   color: #888888;
   line-height: 1.25;
   margin-bottom: 0.5em;
 }
 .sectioned-page-wrapper .section .section-title h3 {
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 1.625;
   text-align: center;
   text-transform: uppercase;
   color: #2D2D2D;
@@ -8532,8 +8530,7 @@ Site Footer
   }
 }
 .site-header .widget-area .widget.widget_text {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
+  font-family: "Nunito Sans", "sans-serif";
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.625;
@@ -8573,11 +8570,8 @@ Site Footer
 }
 .sidebar.sidebar-primary .button {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
   color: #FFF;
   font-size: 12px;
   font-weight: 700;
@@ -8618,11 +8612,8 @@ Site Footer
 }
 .sidebar.sidebar-primary section.widget.widget_text .widget-wrap .button {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
   color: #888888;
   font-size: 12px;
   font-weight: 700;
@@ -8640,15 +8631,27 @@ Site Footer
 .text-sizer {
   display: block;
   z-index: 90;
-  color: #888888;
-  text-align: right;
+  color: #363636;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .text-sizer {
+    text-align: right;
+    background: none;
+    color: #888888;
+  }
 }
 .text-sizer div {
-  border: 1px solid #D4D4D4;
-  background: rgba(255, 255, 255, 0.8);
+  background: #f0f0f0;
   width: auto;
   padding: 0.5em 1em;
-  float: right;
+}
+@media (min-width: 768px) {
+  .text-sizer div {
+    float: right;
+    border: 1px solid #D4D4D4;
+    background: rgba(255, 255, 255, 0.8);
+  }
 }
 .text-sizer div i {
   margin-left: 0.5em;
@@ -8686,8 +8689,7 @@ Site Footer
   display: none;
 }
 .su-accordion .su-spoiler .su-spoiler-title {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
+  font-family: "Nunito Sans", "sans-serif";
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.625;
@@ -8723,9 +8725,6 @@ Site Footer
 /* Smaller screens */
 @media only screen and (max-width: 1099px) {
   /* Enter Your Custom Styles Here */
-  div.wrap {
-    padding: 0 15px;
-  }
   /*.nav-primary{
     position: relative;
     li.menu-item{
@@ -8911,6 +8910,7 @@ Site Footer
     -moz-column-count: 1;
     -webkit-column-count: 1;
     column-count: 1;
+    margin-left: 0;
   }
   .tablepress td,
   .tablepress th {

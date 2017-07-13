@@ -1,27 +1,30 @@
 jQuery(document).ready(function($){
     //testing
-    $('#mobile-menu-open').addClass('active');
-    $('#menu-topnav').slideDown( 500 );
-
+    //$('#mobile-menu-open').addClass('active');
+    //$('#menu-topnav').slideDown( 500 );
     
-
     $('#mobile-menu-open a').on('click', function(e) {
         e.preventDefault();
 
+        $('body').toggleClass('nav-open');
         var $mobileMenuOpen = $(this).parent();
         $mobileMenuOpen.toggleClass('active');
-        if ($mobileMenuOpen.hasClass('open'))
-            $('#menu-topnav').slideUp( 500 );
-        else
-            $('#menu-topnav').slideDown( 500 );
+        //$('.nav-primary').toggle();
+        $('.nav-primary .wrap').slideToggle(200);
+        //if ($mobileMenuOpen.hasClass('open'))
+        //    $('#menu-topnav').slideUp( 500 );
+        //else
+        //    $('#menu-topnav').slideDown( 500 );
     });
 
-    $('#menu-topnav li.menu-item-has-children .toggle').on('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        $(this).find('.sub-menu').slideToggle(500);
-        $(this).find('.fa').toggleClass('fa-angle-down fa-angle-up');
+    $('#menu-topnav li.menu-item-has-children a').on('click', function(e) {
+        var $target = $(e.target);
+        if ($target.hasClass('toggle') || $target.parent().hasClass('toggle')) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            $(this).siblings('.sub-menu').slideToggle(500);
+            $(this).find('.fa').toggleClass('fa-angle-down fa-angle-up');
+        }
     });
 
     var mobileNav = false;
@@ -29,12 +32,14 @@ jQuery(document).ready(function($){
         if($( window ).width() >= 768){
             if (mobileNav) {
                 $('#menu-topnav').find('li.menu-item-has-children span.toggle').remove();
+                $('.nav-primary .wrap').css({height: ''});
                 mobileNav = false;
             }
         } else {
             // alter menu
             if (!mobileNav) {
                 $('#menu-topnav').find('li.menu-item-has-children > a').append('<span class="toggle"><i class="fa fa-2x fa-angle-down"></i></span>');
+                $('.nav-primary .wrap').css({height: 'calc(100vh - ' + $(".site-header").outerHeight() + 'px)'});
                 mobileNav = true;
             }
         }

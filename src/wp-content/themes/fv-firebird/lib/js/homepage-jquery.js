@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
             //$(".hp-top").sticky({topSpacing:preheaderheight+headerheight});
             $(".site-container").css({marginTop: preheaderheight + headerheight + "px"});
         } else {
-            $(".site-container").css({marginTop: ""});
+            $(".site-container").css({marginTop: headerheight + "px"});
         }
     }
 

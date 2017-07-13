@@ -19,20 +19,17 @@
 /* Buttons */
 .button {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -43,22 +40,19 @@
 .button:hover,
 .button a:hover {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
-  background-color: rgba(252, 176, 64, 0.4);
+  background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
 .msd-clearfix {
@@ -80,11 +74,16 @@ html {
 body {
   background-color: #FFF;
   color: #2D2D2D;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-family: "Nunito Sans", "sans-serif";
+  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.625;
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
 }
 a,
 button,
@@ -175,7 +174,6 @@ address {
 --------------------------------------------- */
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -185,8 +183,7 @@ h6 {
   font-size: 1.6rem;
   line-height: 1.625;
   line-height: 1.2;
-  margin: 0 0 16px;
-  margin: 0 0 1.6rem;
+  margin: 0 0 .12em;
 }
 h1 {
   font-size: 36px;
@@ -199,6 +196,9 @@ h2 {
 h3 {
   font-size: 24px;
   font-size: 2.4rem;
+  line-height: 1.2;
+  font-family: serif;
+  text-transform: uppercase;
 }
 h4 {
   font-size: 20px;
@@ -272,20 +272,17 @@ input[type="submit"],
 .button,
 .entry-content .button {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -300,22 +297,19 @@ input:hover[type="submit"],
 .button:hover,
 .entry-content .button:hover {
   padding: 6px 24px;
-  font-family: "Tangerine";
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.625;
-  color: #FCB040;
+  font-family: "Nunito Sans", "sans-serif";
+  font-weight: bold;
+  color: #42badc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   display: table;
   margin: 12px auto;
   text-decoration: none;
-  background-color: rgba(252, 176, 64, 0);
-  border: 2px solid #FCB040;
+  background-color: rgba(66, 186, 220, 0);
+  border: 2px solid #42badc;
   border-radius: 6px;
-  background-color: rgba(252, 176, 64, 0.4);
+  background-color: rgba(66, 186, 220, 0.4);
 }
 .entry-content .button:hover {
   color: #FFF;

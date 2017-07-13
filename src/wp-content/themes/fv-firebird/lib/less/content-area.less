@@ -4,7 +4,11 @@
 Content Area
 ---------------------------------------------------------------------------------------------------- */
 main.content{
-  padding: 6rem 0 2rem 2rem;
+  padding: 1rem 0;
+
+  @media @desktop {
+    padding: 6rem 0 2rem 2rem;
+  }
 }
 /* Entries
 --------------------------------------------- */
@@ -170,14 +174,18 @@ article.entry {
 
 .entry-header{
   .entry-title{
-    .customheader(6);
+    .customheader(4.35);
     font-weight: bold;
     color: @primaryGreen;
     line-height: 1.25;
     margin: 0 0 2rem 0;
     text-align: left;
     //text-transform: uppercase;
-    max-width: 75%;
+
+    @media @tablet {
+      font-size: 6rem;
+      max-width: 75%;
+    }
   }
   .entry-subtitle{
     .customheader(2.1);

@@ -112,7 +112,11 @@ Site Navigation
 
 /* Primary Navigation
 --------------------------------------------- */
-
+@media @tablet-max {
+  body.nav-open {
+    position: fixed;
+  }
+}
 
 #mobile-menu-open {
   display: inline-block;
@@ -153,14 +157,25 @@ Site Navigation
   }
 }
 
+@media @tablet-max {
+  .nav-primary {
+    .wrap {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      background: rgba(0,0,0,.7);
+      overflow: auto;
+      height: 100vh;
+    }
+  }
+}
+
 #menu-topnav {
   @media @tablet-max {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
+    //display: none;
     background: @white;
     color: @white;
     font-size: 1.6rem;
@@ -178,17 +193,14 @@ Site Navigation
       }
 
       &.menu-item-has-children{
-        /*> a:after{
-          .fontawesome;
-          content: '\f0da';
-          margin: 0 0.5em;
-          position: absolute;
-          right: 0;
-        }*/
+        > a:after{
+          content: none;
+        }
 
         .toggle {
           position: absolute;
           right: 0;
+          padding: 0 1rem;
         }
       }
 
@@ -202,6 +214,10 @@ Site Navigation
     .sub-menu{
       width: 100%;
       background: @primaryGreen;
+      position: relative;
+      left: auto;
+      display: none;
+      opacity: 1;
     }
   }
 
@@ -214,12 +230,13 @@ Site Navigation
 
 
 .nav-primary {
-  display: inline-block;
   width: 100%;
   text-align: right;
+  position: relative;
 
   @media @desktop {
     width: 80%;
+    display: inline-block;
   }
 
   li.menu-item{

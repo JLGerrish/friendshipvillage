@@ -14,7 +14,12 @@ html {
 body {
   background-color: @white;
   color: @dkgrey;
-  .custombody(1.8);
+  .custombody(1.6);
+
+  @media @desktop {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
 }
 
 a,
@@ -118,14 +123,14 @@ address{
 
 h1,
 h2,
-h3,
+//h3,
 h4,
 h5,
 h6 {
   .customheader();
   line-height: 1.2;
-  margin: 0 0 16px;
-  margin: 0 0 1.6rem;
+  //margin: 0 0 16px;
+  margin: 0 0 .12em;
 }
 
 h1 {
@@ -141,6 +146,9 @@ h2 {
 h3 {
   font-size: 24px;
   font-size: 2.4rem;
+  line-height: 1.2;
+  font-family: @font-serif;
+  text-transform: uppercase;
 }
 
 h4 {
