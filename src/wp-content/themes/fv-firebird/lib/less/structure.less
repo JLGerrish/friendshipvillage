@@ -16,13 +16,19 @@ Structure and Layout
 .sidebar-secondary section,
 article {
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 1200px;
   }
 
 .site-inner {
   clear: both;
   padding: 0;
- .background-image(linear-gradient(to right, @offwhite 0%,@offwhite 33.3%,@white 33.4%,@white 100%));
+ //.background-image(linear-gradient(to right, @offwhite 0%,@offwhite 33.3%,@white 33.4%,@white 100%));
+
+ @media @mobile-xl-max {
+   img {
+     .counter-mobile-padding;
+   }
+ }
 }
 
 /* Column Widths and Positions

@@ -1,6 +1,6 @@
 /* Import Fonts
 ------------------------------------------------------------ */
-@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans);
+@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans:400,700);
 /* Font Stacks */
 .customsansserif,
 .customsanserif {
@@ -18,21 +18,26 @@
 .mobile-padding {
   padding: 0 1.5rem;
 }
+.counter-mobile-padding {
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
 /* Arrows */
 /* Buttons */
 .button {
   padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
-  color: #42badc;
+  color: #292929;
   font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
 }
 .button:hover,
 .button a:hover {
@@ -46,8 +51,8 @@
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
@@ -64,8 +69,8 @@ Content Area
 main.content {
   padding: 1rem 0;
 }
-@media (min-width: 1024px) {
-  main.content {
+@media (min-width: 992px) {
+  main.content.col-md-9 {
     padding: 1rem 0 2rem 5rem;
   }
 }
@@ -215,7 +220,6 @@ article.entry {
 @media (min-width: 768px) {
   .entry-header .entry-title {
     font-size: 4rem;
-    max-width: 75%;
   }
 }
 .entry-header .entry-subtitle {

@@ -11,6 +11,8 @@ add_image_size('mini-thumbnail', 90, 90, TRUE);
 add_image_size('medlg', 500, 500, FALSE);
 add_image_size('facebook', 200, 200, TRUE);
 add_image_size('linkedin', 180, 110, TRUE);
+add_image_size('mobile-lg-full-width', 767);
+add_image_size('mobile-sm-full-width', 374);
 
 /* Display a custom favicon */
 add_filter( 'genesis_pre_load_favicon', 'msdlab_favicon_filter' );

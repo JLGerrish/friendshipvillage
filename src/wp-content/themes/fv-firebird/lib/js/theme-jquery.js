@@ -59,14 +59,22 @@ jQuery(document).ready(function($) {
         var hpTopHeight = $(".hp-top").outerHeight();
 
         if($( window ).width() >= 768){
+            if ($('.content').find('.text-sizer').length <= 0) {
+                $('.content').prepend('<div class="text-sizer"><div>Text Size: <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
+                $('#page-title-area').next('.text-sizer').remove();
+            }
+        } else {
+            if ( $('#page-title-area').next('.text-sizer').length <= 0) {
+                $('#page-title-area').after('<div class="text-sizer"><div>Text Size: <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
+                $('.content').find('.text-sizer').remove();
+            }
+        }
+        
+        if($( window ).width() >= 1024){
             $(".pre-header").css({position: "fixed", top: 0});
             $(".site-header").css({position: "fixed", top: preheaderheight+"px"});
             $(".hp-top").css({position: "fixed", top: preheaderheight+headerheight+"px"});
             $(".site-container").css({marginTop: preheaderheight + headerheight + "px"});
-            if ($('article:first-of-type').find('.text-sizer').length <= 0) {
-                $('article:first-of-type').prepend('<div class="text-sizer"><div>Text Size: <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
-                $('#page-title-area').next('.text-sizer').remove();
-            }
             
             //$(".page-title-area").css({marginTop: preheaderheight+headerheight+hpTopHeight+"px" })
             //$(".pre-header").sticky();
@@ -78,10 +86,7 @@ jQuery(document).ready(function($) {
             $(".site-header").css({position: "fixed", top: 0});
             $(".hp-top").css({position: "", top: ""});
             $(".site-container").css({marginTop: headerheight + "px"});
-            if ( $('#page-title-area').next('.text-sizer').length <= 0) {
-                $('#page-title-area').after('<div class="text-sizer"><div>Text Size: <i class="minus fa fa-minus"></i><i class="plus fa fa-plus"></i></div></div>');
-                $('article:first-of-type').find('.text-sizer').remove();
-            }
+
         }
     }
 

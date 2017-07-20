@@ -6,8 +6,10 @@ Content Area
 main.content{
   padding: 1rem 0;
 
-  @media @desktop {
-    padding: 1rem 0 2rem 5rem;
+  &.col-md-9 {
+    @media (min-width: @screen-md) {
+      padding: 1rem 0 2rem 5rem;
+    }
   }
 }
 /* Entries
@@ -186,7 +188,7 @@ article.entry {
 
     @media @tablet {
       font-size: 4rem;
-      max-width: 75%;
+      //max-width: 75%;
     }
   }
   .entry-subtitle{

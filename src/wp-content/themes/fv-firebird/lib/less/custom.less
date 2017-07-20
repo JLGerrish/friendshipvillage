@@ -21,7 +21,7 @@
     background-size: cover;
     position: relative;
 
-    @media @desktop {
+    @media @tablet {
       padding-top: 316/1199*100%;
       background-position: center center;
     }
@@ -47,12 +47,20 @@
           @media @desktop {
             .align-items(center);
           }
-        }
       }
+
+      &.texturize {
+        padding: 0;
+        //.gradient(@color,darken(@color,20%),lighten(@color,20%));
+        .background-image(linear-gradient(to right, fade(@highlightBlue, 75%) 0%, fade(@highlightBlue, 0%) 60%,rgba(0,0,0,0) 100%));
+        //background: linear-gradient(to right, rgba(66,186,220,0.3) 0%,rgba(40,113,134,0) 40%,rgba(0,0,0,0) 100%);
+      }
+    }
 
     .section-title{ 
       padding: 0;
       color: @primaryGreen;
+      font-weight: bold;
     }
   }
 }
@@ -67,7 +75,7 @@
   .justify-content(center);
 
   text-align: left;
-  text-shadow: 0 0 8px @medgrey;
+  //text-shadow: 0 0 8px @medgrey;
   background: fade(@white,0%);
   display: block;
   //.script(8);
@@ -90,13 +98,13 @@
   }
 }
 .sidebar.sidebar-primary{
-  .button{
-    .button(@blue,@white);
-    background-color: @blue;
-    &:hover{
-      background-color:fade(@blue,80%);
-    }
-  }
+  //.button{
+    //.button(@blue,@white);
+    //background-color: @blue;
+    //&:hover{
+    //  background-color:fade(@blue,80%);
+    //}
+  //}
   section.widget.widget_text{
     padding: 2rem;
     margin-bottom: 4rem;
@@ -139,18 +147,20 @@
   @media @tablet {
     text-align: right;
     background: none;
-    color: @medgrey;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1;
   }
 
   div{
     background: #f0f0f0;
     width: auto;
-    padding: 0.5em 1em;
+    padding: 0.5em;
 
     @media @tablet {
-      float: right;
-      border: 1px solid @ltgrey;
-      background: fade(@white,80%);
+      background: #f0f0f0;
     }
 
     i{
@@ -158,6 +168,11 @@
       padding: 0.5em;
       color: @primaryGreen;
       cursor: pointer;
+
+      @media @tablet {
+        padding: 0 .25em;
+        margin-left: .25em;
+      }
     }
   }
 }

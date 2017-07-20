@@ -2,7 +2,7 @@
 @import 'mixins';
 
 .site-container {
-  @media @tablet {
+  @media @desktop {
     padding-top: 466/1199*100%; //same as hero image. the rest is calculated in JS
   }
 }
@@ -32,8 +32,9 @@
         margin-left: auto;
         margin-right: auto;
         right: 0;
+        padding: 1.5rem;
 
-        @media @mobile {
+        @media @mobile-xl-max {
           padding: 0 2rem;
           .justify-content(flex-end);
         }
@@ -90,6 +91,7 @@
 
   @media @tablet {
     font-size: 6rem;
+    max-width: 80%;
   }
 }
 .sectioned-page-wrapper{
@@ -108,6 +110,9 @@
     .section-body{
       .wrap{
         padding: 0;
+      }
+      .row {
+        margin: 0;
       }
     }
     .section-content{
@@ -244,23 +249,62 @@
     background-position: left top;
     background-size: 45%;
     background-color: @white;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+
+    @media @mobile-xl {
+      padding-left: 50%;
+    }
+
+    @media @mobile {
+      padding-top: 701/558*100%;
+      background-position: top left;
+      background-size: 100% auto;
+
+      /*.section-title,.section-body{
+        background-color: @white;
+        //padding: 0 2vw;
+        
+      }*/
+    }
+
+    @media @tablet and @tablet-max {
+      padding-top: 9vw;
+      padding-bottom: 9vw;
+    }
+
+    @media @desktop {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+
     .section-title{
-      @media @desktop {
-        padding-left: 50%;
-      }
       h3{
         color: @primaryGreen;
         text-align: left;
+
+        @media @mobile-xl and @mobile-xl-max {
+          font-size: 3.4vw;
+        }
+
+        @media @tablet and @tablet-max {
+          font-size: 3vw;
+        }
       }
     }
     .section-body{
        //padding-left: 50%;
+      @media @mobile-xl and @mobile-xl-max {
+        font-size: 2.2vw;
+      }
+
+      @media @tablet and @tablet-max {
+        font-size: 1.8vw;
+      }
+
       .wrap{
         max-width: 550px;
         margin: 0;
         text-align: left;
+        padding: 2rem 0 0 0;
       }
     }
   }
@@ -268,8 +312,8 @@
 
 
 
-@media only screen and (max-width: 980px) {
-  nav.homepage-top{
+@media only screen and (max-width: 991px) {
+  /*nav.homepage-top{
     .menu{
       li{
         a{
@@ -277,7 +321,7 @@
         }
       }
     }
-  }
+  }*/
     
   .sectioned-page-wrapper{
     .section.section-forms{
@@ -318,29 +362,13 @@
       padding-top: 7vw;
       padding-bottom: 7vw;
     }
-    .section.section-programs{
+    /*.section.section-programs{
       padding-top: 7vw;
       padding-bottom: 7vw;
       .section-title,.section-body{
         //padding-right: 2%;
       }
-    }
+    }*/
   }
 }
 
-
-@media only screen and (max-width: 479px) {
-  .sectioned-page-wrapper{
-    .section.section-programs{
-      padding-top: 701/558*100%;
-      background-position: top left;
-      background-size: 100% auto;
-      .section-title,.section-body{
-        background-color: @white;
-        //padding: 0 2vw;
-        
-      }
-    }
-  }
-
-}

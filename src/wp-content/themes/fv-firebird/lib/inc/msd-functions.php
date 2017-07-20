@@ -215,11 +215,11 @@ add_filter( 'the_content', 'remove_empty_p', 20, 1 );
 function remove_empty_p( $content ){
     // clean up p tags around block elements
     $content = preg_replace( array(
-        '#<p>\s*<(div|aside|section|article|header|footer)#',
-        '#</(div|aside|section|article|header|footer)>\s*</p>#',
-        '#</(div|aside|section|article|header|footer)>\s*<br ?/?>#',
-        '#<(div|aside|section|article|header|footer)(.*?)>\s*</p>#',
-        '#<p>\s*</(div|aside|section|article|header|footer)#',
+        '#<p>\s*<(div|aside|section|article|header|footer|img)#',
+        '#</(div|aside|section|article|header|footer|img)>\s*</p>#',
+        '#</(div|aside|section|article|header|footer|img)>\s*<br ?/?>#',
+        '#<(div|aside|section|article|header|footer|img)(.*?)>\s*</p>#',
+        '#<p>\s*</(div|aside|section|article|header|footer|img)#',
     ), array(
         '<$1',
         '</$1>',

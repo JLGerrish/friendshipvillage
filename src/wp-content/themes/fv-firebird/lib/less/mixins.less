@@ -1,11 +1,12 @@
 @import 'lesshat';
+@import '../bootstrap/less/variables.less';
 //@import '../../../../../../node_modules/flex-less/flex.less';
 //@import 'node_modules/flex-less/flex';
 
 /* Import Fonts
 ------------------------------------------------------------ */
 //@import url(//fonts.googleapis.com/css?family=Allura|Raleway:400,200,700);
-@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans); //Italianno|Rouge+Script
+@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans:400,700); //Italianno|Rouge+Script
 
 /* Font Stacks */
 .customserif(@size:1.6) {
@@ -51,6 +52,7 @@
 
 @mobile: ~"(max-width: 479px)";
 @mobile-xl: ~"(min-width: 480px)";
+@mobile-xl-max: ~"(max-width: 767px)";
 @tablet: ~"(min-width: 768px)";
 @tablet-max: ~"(max-width: 1023px)";
 @desktop: ~"(min-width: 1024px)";
@@ -118,6 +120,12 @@
 
 .mobile-padding {
   padding: 0 1.5rem;
+}
+
+.counter-mobile-padding {
+  width: calc(~"100% + 3rem");
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
 }
 
 /* Arrows */
@@ -232,7 +240,7 @@
 
 
 /* Buttons */
-.button(@background:@highlightBlue,@color:@highlightBlue) {
+.button(@background:@highlightBlue,@color:@darkGray) {
   padding: 1em 4em .8em 4em;
   //.customsanserif;
   font-family: @font-sans;
@@ -245,8 +253,8 @@
   text-decoration: none;
   background-color: @background;
   //border: 2px solid @color;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
 }
 
 .button{

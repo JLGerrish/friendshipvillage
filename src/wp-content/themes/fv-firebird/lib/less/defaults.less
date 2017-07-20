@@ -12,13 +12,15 @@ html {
 }
 
 body {
+  //display: block;
+  overflow-x: hidden;
   background-color: @white;
   color: @dkgrey;
   .custombody(1.6);
 
   @media @desktop {
     font-size: 1.8rem;
-    font-weight: bold;
+    //font-weight: bold;
   }
 }
 
@@ -62,6 +64,7 @@ a:hover {
 }
 a:focus {
     outline: 0;
+    text-decoration: none;
 }
 
 p {
@@ -141,6 +144,7 @@ h1 {
 h2 {
   font-size: 30px;
   font-size: 3rem;
+  font-family: @font-serif;
 }
 
 h3 {
@@ -153,16 +157,19 @@ h3 {
 h4 {
   font-size: 20px;
   font-size: 2rem;
+  font-family: @font-serif;
 }
 
 h5 {
   font-size: 18px;
   font-size: 1.8rem;
+  font-family: @font-serif;
 }
 
 h6 {
   font-size: 16px;
   font-size: 1.6rem;
+  font-family: @font-serif;
 }
 
 /* Objects
@@ -174,7 +181,7 @@ img,
 object,
 video,
 .wp-caption {
-  max-width: 100%;
+  //max-width: 100%;
 }
 
 img {

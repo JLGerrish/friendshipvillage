@@ -111,3 +111,4 @@ function msdlab_icon_shortcodes($atts){
     }
     return '<i class="'.implode(" ",$classes).'"></i>';
 }
+

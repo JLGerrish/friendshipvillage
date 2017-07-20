@@ -47,25 +47,55 @@ Plugins
 /* Gravity Forms
 --------------------------------------------- */
 
+.gform_wrapper {
+  h3 {
+    margin: 0;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #888888;
+  }
+  ::-moz-placeholder {
+    color: #888888;
+  }
+  :-ms-input-placeholder {
+    color: #888888;
+  }
+  :-moz-placeholder {
+    color: #888888;
+  }
+}
+
 div.gform_wrapper input[type="email"],
 div.gform_wrapper input[type="text"],
+div.gform_wrapper input[type="tel"],
 div.gform_wrapper textarea,
-div.gform_wrapper .ginput_complex label {
-  padding: 2px;
-  padding: 0.2rem;
+div.gform_wrapper .ginput_complex label,
+div.gform_wrapper select {
+  padding: .25em .5em;
+  font-weight: normal;
 }
 
 div.gform_wrapper .ginput_complex label {
   padding: 0;
 }
 
+div.gform_wrapper ul {
+  list-style: none;
+}
+
 div.gform_wrapper li,
 div.gform_wrapper form li {
   margin: 0;
+  padding: .75rem 0;
+}
+
+.gform_wrapper ul.gform_fields li.gfield {
+  padding-right: 0;
 }
 
 div.gform_wrapper .gform_body .gfield{
-  padding: 0.5em;
+  //padding: 0.5em;
   &.even{}
   &.odd{}
   .ginput_container{

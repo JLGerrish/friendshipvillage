@@ -1,6 +1,6 @@
 /* Import Fonts
 ------------------------------------------------------------ */
-@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans);
+@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans:400,700);
 /* Font Stacks */
 .customsansserif,
 .customsanserif {
@@ -18,21 +18,26 @@
 .mobile-padding {
   padding: 0 1.5rem;
 }
+.counter-mobile-padding {
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
 /* Arrows */
 /* Buttons */
 .button {
   padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
-  color: #42badc;
+  color: #292929;
   font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -51,8 +56,8 @@
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
@@ -73,6 +78,7 @@ html {
   /* 10px browser default */
 }
 body {
+  overflow-x: hidden;
   background-color: #FFF;
   color: #2D2D2D;
   font-family: "Nunito Sans", "sans-serif";
@@ -83,7 +89,6 @@ body {
 @media (min-width: 1024px) {
   body {
     font-size: 1.8rem;
-    font-weight: bold;
   }
 }
 a,
@@ -121,6 +126,7 @@ a:hover {
 }
 a:focus {
   outline: 0;
+  text-decoration: none;
 }
 p {
   margin: 0 0 24px;
@@ -193,6 +199,7 @@ h1 {
 h2 {
   font-size: 30px;
   font-size: 3rem;
+  font-family: serif;
 }
 h3 {
   font-size: 2.9rem;
@@ -203,25 +210,20 @@ h3 {
 h4 {
   font-size: 20px;
   font-size: 2rem;
+  font-family: serif;
 }
 h5 {
   font-size: 18px;
   font-size: 1.8rem;
+  font-family: serif;
 }
 h6 {
   font-size: 16px;
   font-size: 1.6rem;
+  font-family: serif;
 }
 /* Objects
 --------------------------------------------- */
-embed,
-iframe,
-img,
-object,
-video,
-.wp-caption {
-  max-width: 100%;
-}
 img {
   height: auto;
   width: auto;
@@ -274,15 +276,15 @@ input[type="submit"],
   padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
-  color: #42badc;
+  color: #292929;
   font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -305,8 +307,8 @@ input:hover[type="submit"],
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   background-color: rgba(66, 186, 220, 0.4);
 }
 .entry-content .button:hover {

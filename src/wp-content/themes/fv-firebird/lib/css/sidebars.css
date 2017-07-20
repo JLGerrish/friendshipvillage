@@ -1,6 +1,6 @@
 /* Import Fonts
 ------------------------------------------------------------ */
-@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans);
+@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans:400,700);
 /* Font Stacks */
 .customsansserif,
 .customsanserif {
@@ -18,21 +18,26 @@
 .mobile-padding {
   padding: 0 1.5rem;
 }
+.counter-mobile-padding {
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
 /* Arrows */
 /* Buttons */
 .button {
   padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
-  color: #42badc;
+  color: #292929;
   font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
 }
 .button:hover,
 .button a:hover {
@@ -46,8 +51,8 @@
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
@@ -62,10 +67,20 @@
 Sidebars
 ---------------------------------------------------------------------------------------------------- */
 .sidebar {
-  background: #E3E2E0;
   color: #D4D4D4;
-  padding: 6rem 2rem 2rem 0;
   height: 100%;
+  padding: 0;
+  /*@media @desktop {
+    width: 320px;
+  }*/
+  /*Text Widget with Click */
+}
+@media (max-width: 767px) {
+  .sidebar {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 }
 .sidebar a {
   border-bottom: 1px solid #ddd;
@@ -84,6 +99,7 @@ Sidebars
 }
 .sidebar .widget {
   border-radius: 0px;
+  background-color: #f0f0f0;
 }
 .sidebar .widget .widget-title {
   font-family: "Nunito Sans", "sans-serif";
@@ -95,22 +111,19 @@ Sidebars
 .sidebar .enews-widget {
   background-color: #333;
 }
-.sidebar {
-  /*Text Widget with Click */
-}
 .sidebar .widget_text .textwidget .readmore {
   padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
-  color: #42badc;
+  color: #292929;
   font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   float: right;
 }
 .sidebar .widget_text a {
@@ -126,14 +139,23 @@ Sidebars
 .sidebar .widget_sp_image .link a i {
   color: #FCB040;
 }
-.sidebar .widget.gform_widget {
-  background-color: #D4D4D4;
-  margin-right: -2rem;
-  margin-left: -50rem;
-  padding: 0.4rem 2rem 0.4rem 50rem;
-}
 .sidebar span.fa-stack {
-  color: #FCB040;
+  color: #004843;
+}
+.sidebar .contact-form {
+  background: #004843;
+  padding: 2rem;
+}
+.sidebar .contact-form h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.sidebar .contact-form .button {
+  width: 100%;
+  background: #FFF;
+  color: #292929;
+  font-weight: bold;
+  border: 0;
 }
 
 /*# sourceMappingURL=sidebars.css.map */

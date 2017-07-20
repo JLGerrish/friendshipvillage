@@ -1,6 +1,6 @@
 /* Import Fonts
 ------------------------------------------------------------ */
-@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans);
+@import url(//fonts.googleapis.com/css?family=Tangerine:400,700|Nunito+Sans:400,700);
 /* Font Stacks */
 .customsansserif,
 .customsanserif {
@@ -18,21 +18,26 @@
 .mobile-padding {
   padding: 0 1.5rem;
 }
+.counter-mobile-padding {
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
 /* Arrows */
 /* Buttons */
 .button {
   padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
-  color: #42badc;
+  color: #292929;
   font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
 }
 .button:hover,
 .button a:hover {
@@ -46,8 +51,8 @@
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
-  border-radius: 3px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   background-color: rgba(66, 186, 220, 0.4);
 }
 /* Clears */
@@ -66,7 +71,13 @@ Site Footer
   color: #FFF;
   font-size: 1.3rem;
   text-align: center;
-  padding: 2rem;
+  padding: 0 1.5rem;
+  padding-bottom: 20px;
+}
+@media (min-width: 1024px) {
+  .site-footer {
+    padding: 2rem;
+  }
 }
 .site-footer a {
   color: #FFF;
@@ -105,9 +116,7 @@ Site Footer
 .site-footer .wrap div.icons i.logo {
   height: 40px;
   position: relative;
-  top: 12px;
   display: inline-block;
-  margin: 0 4px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -119,14 +128,20 @@ Site Footer
 .site-footer .wrap div.icons i.logo-lcs {
   background-image: url("../img/lcs_white_logo.png");
   background-position: right center;
+  background-size: contain;
   font-style: normal;
-  line-height: 3;
   height: auto;
   text-align: left;
-  margin-top: 7px;
   max-width: 290px;
   width: 100%;
-  padding-top: 8.86524823%;
+  padding-top: 25.70921986px;
+}
+@media (min-width: 1024px) {
+  .site-footer .wrap div.icons i.logo-lcs {
+    height: 40px;
+    top: 12px;
+    margin: 0 4px;
+  }
 }
 .site-footer .wrap .backtotop {
   position: absolute;

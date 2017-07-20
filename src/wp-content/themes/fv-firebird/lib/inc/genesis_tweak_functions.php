@@ -328,14 +328,17 @@ function msdlab_do_section_title_styles()
         $myid = get_topmost_parent($post->ID);
     }
 
-    // mobile thumb id relies on plugin: Mobile Featured Image (https://wordpress.org/plugins/mobile-featured-image/)
-    $mobile_thumb_id = get_post_meta( $myid, 'mobileimg-mobile-thumbnail_id', true );
+    $thumb_url = msdlab_get_thumbnail_url($myid,'full');
+    if ($thumb_url != '') {
+        // mobile thumb id relies on plugin: Mobile Featured Image (https://wordpress.org/plugins/mobile-featured-image/)
+        $mobile_thumb_id = get_post_meta( $myid, 'mobileimg-mobile-thumbnail_id', true );
 
-    echo '<style>#banner-'.$myid.'{background-image:url('.msdlab_get_thumbnail_url($myid,'full').');}';
-    if ($mobile_thumb_id !== '') {       
-        echo '@media (max-width: 767px) {#banner-'.$myid.'{background-image:url('.wp_get_attachment_image_url($mobile_thumb_id,'full').');}}';
+        echo '<style>#banner-'.$myid.'{background-image:url('.$thumb_url.');}';
+        if ($mobile_thumb_id !== '') {       
+            echo '@media (max-width: 767px) {#banner-'.$myid.'{background-image:url('.wp_get_attachment_image_url($mobile_thumb_id,'full').');}}';
+        }
+        echo '</style>';
     }
-    echo '</style>';
 }
 
 
