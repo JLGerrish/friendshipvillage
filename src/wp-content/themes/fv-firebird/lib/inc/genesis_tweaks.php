@@ -17,6 +17,10 @@ add_theme_support( 'genesis-structural-wraps', array(
 ) );
 
 /*** HEADER ***/
+add_action('get_header', 'remove_admin_login_header');
+function remove_admin_login_header() {
+	remove_action('wp_head', '_admin_bar_bump_cb');
+}
 add_action('wp_head','msdlab_fix_ie_compatibility_mode',1);
 add_action('wp_head','msdlab_add_apple_touch_icons');
 add_action('wp_head','msdlab_maybe_wrap_inner');

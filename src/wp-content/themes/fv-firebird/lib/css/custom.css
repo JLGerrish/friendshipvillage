@@ -18,10 +18,12 @@
 .mobile-padding {
   padding: 0 1.5rem;
 }
-.counter-mobile-padding {
-  width: calc(100% + 3rem);
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+@media (max-width: 767px) {
+  .counter-mobile-padding {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 }
 /* Arrows */
 /* Buttons */
@@ -30,30 +32,19 @@
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #292929;
-  font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
   border-radius: 5px;
-  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
+  box-shadow: 1px 1px 5px -1px #000000;
+  border: 0;
 }
 .button:hover,
 .button a:hover {
-  padding: 1em 4em .8em 4em;
-  font-family: "Nunito Sans", "sans-serif";
-  font-weight: bold;
-  color: #42badc;
-  font-size: 1.2rem;
-  line-height: 1;
-  display: table;
-  margin: 1.2rem auto;
-  text-decoration: none;
-  background-color: #42badc;
-  border-radius: 5px;
-  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   background-color: rgba(66, 186, 220, 0.4);
+  color: #292929;
 }
 /* Clears */
 .msd-clearfix {
@@ -142,6 +133,11 @@
   color: #004843;
   font-weight: bold;
 }
+@media (min-width: 768px) {
+  .page-title-area .banner .section-title {
+    width: 50%;
+  }
+}
 .section-title {
   display: -webkit-box;
   display: -moz-box;
@@ -180,44 +176,20 @@
   text-decoration: none;
   opacity: 1;
 }
-.sidebar.sidebar-primary section.widget.widget_text {
-  padding: 2rem;
-  margin-bottom: 4rem;
-  color: #888888;
-}
 .sidebar.sidebar-primary section.widget.widget_text .widget-wrap {
-  background-color: #FCB040;
-  border: 1px solid #888888;
-  border-radius: 12px;
-  text-align: center;
-  padding: 2rem;
-  font-size: 2.1rem;
+  /*.button{
+        .button(@white,@medgrey);
+        background-color: @white;
+        font-size: 14px;
+        width: 98%;
+      }*/
 }
-.sidebar.sidebar-primary section.widget.widget_text .widget-wrap .widget-title {
-  background-repeat: no-repeat;
-  background-position: center left;
-  background-size: 50px auto;
-  background-image: url(../img/icon-calculator.png);
-  padding-left: 55px;
-  color: #888888;
-  font-size: 3rem;
-  line-height: 1;
+.sidebar.sidebar-primary section.widget.widget_text .widget-wrap a {
+  color: #004843;
+  text-decoration: underline;
 }
-.sidebar.sidebar-primary section.widget.widget_text .widget-wrap .button {
-  padding: 1em 4em .8em 4em;
-  font-family: "Nunito Sans", "sans-serif";
-  font-weight: bold;
-  color: #888888;
-  font-size: 1.2rem;
-  line-height: 1;
-  display: table;
-  margin: 1.2rem auto;
+.sidebar.sidebar-primary section.widget.widget_text .widget-wrap a a:hover {
   text-decoration: none;
-  border-radius: 5px;
-  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
-  background-color: #FFF;
-  font-size: 14px;
-  width: 98%;
 }
 .text-sizer {
   display: block;
@@ -272,7 +244,6 @@
 .msd-icon.circle:before,
 .msd-fa.square:before,
 .msd-icon.square:before {
-  background: #fca627;
   color: #FFF;
   border: 2px solid white;
   height: 2.4em;
@@ -293,7 +264,7 @@
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.625;
-  color: #0098B2;
+  color: #004843;
 }
 .su-accordion .su-spoiler .su-spoiler-title .su-spoiler-icon {
   font-size: 1.8rem;

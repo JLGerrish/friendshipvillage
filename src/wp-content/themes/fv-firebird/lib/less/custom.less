@@ -61,6 +61,10 @@
       padding: 0;
       color: @primaryGreen;
       font-weight: bold;
+
+      @media @tablet {
+        width: 50%;
+      }
     }
   }
 }
@@ -106,32 +110,42 @@
     //}
   //}
   section.widget.widget_text{
-    padding: 2rem;
-    margin-bottom: 4rem;
-    color: @medgrey;
+    //padding: 2rem;
+    //margin-bottom: 4rem;
+    //color: @medgrey;
     .widget-wrap{
-      background-color: @orange;
-      border: 1px solid @medgrey;
-      border-radius: 12px;
-      text-align: center;
-      padding: 2rem;
-      font-size: 2.1rem;
+      //background-color: @orange;
+      //border: 1px solid @medgrey;
+      //border-radius: 12px;
+      //text-align: center;
+      //padding: 2rem;
+      //font-size: 2.1rem;
       .widget-title{
-          background-repeat: no-repeat;
-          background-position: center left;
-          background-size: 50px auto;
-          background-image:url(../img/icon-calculator.png);
-          padding-left: 55px;
-          color: @medgrey;
-          font-size: 3rem;
-          line-height: 1;
+          //background-repeat: no-repeat;
+          //background-position: center left;
+          //background-size: 50px auto;
+          //background-image:url(../img/icon-calculator.png);
+          //padding-left: 55px;
+          //color: @medgrey;
+          //font-size: 3rem;
+          //line-height: 1;
       }
-      .button{
+
+      a {
+        color: @primaryGreen;
+        text-decoration: underline;
+
+        a:hover {
+          text-decoration: none;
+        }
+      }
+
+      /*.button{
         .button(@white,@medgrey);
         background-color: @white;
         font-size: 14px;
         width: 98%;
-      }
+      }*/
     }
   }
 }
@@ -187,7 +201,7 @@
   }
   &.circle, &.square{
     &:before{
-      background: darken(@orange,5%);
+      //background: darken(@orange,5%);
       color: @white;
       border: 2px solid white;
       height: 2.4em;
@@ -212,7 +226,7 @@
   .su-spoiler{
     .su-spoiler-title{
       .custombody(1.8);
-      color: @blue;
+      color: @primaryGreen;
       .su-spoiler-icon{
         font-size: 1.8rem;
         line-height: 1.8;

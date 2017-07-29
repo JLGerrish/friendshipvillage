@@ -8,6 +8,7 @@ add_action('wp_enqueue_scripts', 'msdlab_add_scripts');
 function msdlab_add_styles() {
     global $is_IE;
     if(!is_admin()){
+        
         //use cdn        
             wp_enqueue_style('bootstrap-style','//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
             wp_enqueue_style('font-awesome-style','//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css',array('bootstrap-style'),'4.5.0');

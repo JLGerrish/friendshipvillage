@@ -178,6 +178,39 @@ img.alignright,
   margin-bottom: 2.4rem;
 }
 
+/* Callouts
+--------------------------------------------- */
+.callout {
+  .counter-mobile-padding;
+  .mobile-padding;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: @highlightBlue;
+  margin-bottom: 2rem;
+
+  @media (min-width: @screen-md) {
+    padding: 4rem;
+  }
+
+  h3 {
+    margin-top: 0;
+
+    @media @mobile {
+      font-size: 2.2rem;
+    }
+  }
+
+  .button {
+    margin: 0;
+    background: @white;
+
+    &:hover {
+      background: @darkGray;
+      color: @white;
+    }
+  }
+}
+
 /* Clears 
 ----------------------------------------------- */
 .pre-header:after,

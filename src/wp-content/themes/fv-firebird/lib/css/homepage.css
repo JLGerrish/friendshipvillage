@@ -18,10 +18,12 @@
 .mobile-padding {
   padding: 0 1.5rem;
 }
-.counter-mobile-padding {
-  width: calc(100% + 3rem);
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+@media (max-width: 767px) {
+  .counter-mobile-padding {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 }
 /* Arrows */
 /* Buttons */
@@ -30,30 +32,19 @@
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #292929;
-  font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
   border-radius: 5px;
-  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
+  box-shadow: 1px 1px 5px -1px #000000;
+  border: 0;
 }
 .button:hover,
 .button a:hover {
-  padding: 1em 4em .8em 4em;
-  font-family: "Nunito Sans", "sans-serif";
-  font-weight: bold;
-  color: #42badc;
-  font-size: 1.2rem;
-  line-height: 1;
-  display: table;
-  margin: 1.2rem auto;
-  text-decoration: none;
-  background-color: #42badc;
-  border-radius: 5px;
-  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   background-color: rgba(66, 186, 220, 0.4);
+  color: #292929;
 }
 /* Clears */
 .msd-clearfix {
@@ -63,14 +54,18 @@
   clear: both;
   visibility: hidden;
 }
-@media (min-width: 1024px) {
-  .site-container {
-    padding-top: 38.86572143%;
+/*.site-container {
+  @media @desktop {
+    padding-top: 466/1199*100%; //same as hero image. the rest is calculated in JS
   }
-}
+}*/
 .hp-top {
   z-index: -1;
   width: 100%;
+  /*@media @desktop {
+    position: fixed;
+    top: 46px + 124px;
+  }*/
 }
 .hp-top .widget_sp_image .image-widget-background {
   padding-top: 88.4375%;
@@ -196,6 +191,23 @@
 .sectioned-page-wrapper .section.section-forms .section-body .row {
   margin: 0;
 }
+@media (min-width: 1024px) {
+  .sectioned-page-wrapper .section.section-forms .section-body .row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.sectioned-page-wrapper .section.section-forms .button {
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .sectioned-page-wrapper .section.section-forms .button {
+    max-width: 280px;
+  }
+}
 .sectioned-page-wrapper .section.section-forms .section-content {
   padding: 0 1.5rem;
   padding-top: 1rem;
@@ -227,6 +239,9 @@
 .sectioned-page-wrapper .section.section-forms .section-content .gform_wrapper select,
 .sectioned-page-wrapper .section.section-forms .section-content .gform_wrapper textarea {
   border-width: 0;
+}
+.sectioned-page-wrapper .section.section-forms .section-content .gform_wrapper textarea {
+  height: 8em;
 }
 .sectioned-page-wrapper .section.section-forms .section-content h3,
 .sectioned-page-wrapper .section.section-forms .section-content h3.gform_title {
@@ -290,22 +305,43 @@
         }
       }*/
 }
+@media (min-width: 1024px) {
+  .sectioned-page-wrapper .section.section-forms .section-content.column-2 {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .sectioned-page-wrapper .section.section-forms .section-content.column-2 .button-wrapper {
+    width: 100%;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+}
 .sectioned-page-wrapper .section.section-forms .section-content.column-2 .button {
   padding: 1em 4em .8em 4em;
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #414042;
-  font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #E3E2E0;
   border-radius: 5px;
-  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
+  box-shadow: 1px 1px 5px -1px #000000;
+  border: 0;
   font-size: 14px;
-  max-width: 280px;
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -333,7 +369,7 @@
 }
 .sectioned-page-wrapper .section.section-programs {
   padding: 0 1.5rem;
-  background-position: left top;
+  background-position: left center;
   background-size: 45%;
   background-color: #FFF;
 }
@@ -362,8 +398,8 @@
 }
 @media (min-width: 1024px) {
   .sectioned-page-wrapper .section.section-programs {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 14%;
+    padding-bottom: 14%;
   }
 }
 .sectioned-page-wrapper .section.section-programs .section-title h3 {

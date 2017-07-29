@@ -83,29 +83,36 @@ ul {
   padding: 0;
 }
 
-blockquote,
-blockquote::before {
-  color: @medgrey;
+blockquote p::before,
+blockquote p::after {
+  //color: @medgrey;
+  font-size: 3em;
 }
 
-blockquote {
-  margin: 40px 40px 24px;
-  margin: 4rem 4rem 2.4rem;
+blockquote p {
+  //margin: 40px 40px 24px;
+  //margin: 4rem 4rem 2.4rem;
   border: none;
-  p{
+  quotes: "\201C" "\201D";
+  /*p{
     .customsanserif;
-  }
+  }*/
 }
 
-blockquote::before {
-  content: "\201C";
-  display: block;
-  font-size: 30px;
-  font-size: 3rem;
-  height: 0;
-  left: -20px;
-  position: relative;
-  top: -10px;
+blockquote p::before {
+  //content: "\201C";
+  content: open-quote;
+  //display: block;
+  //font-size: 30px;
+  //font-size: 3rem;
+  //height: 0;
+  //left: -20px;
+  //position: relative;
+  //top: -10px;
+}
+
+blockquote p::after {
+  content: close-quote;
 }
 
 .entry-content code {

@@ -24,11 +24,16 @@ article {
   padding: 0;
  //.background-image(linear-gradient(to right, @offwhite 0%,@offwhite 33.3%,@white 33.4%,@white 100%));
 
- @media @mobile-xl-max {
-   img {
-     .counter-mobile-padding;
-   }
- }
+  img {
+    .counter-mobile-padding;
+
+    @media @tablet {
+      margin-left: 0;
+      margin-right: 0;
+      width: auto;
+      max-width: 100%;
+    }
+  }
 }
 
 /* Column Widths and Positions

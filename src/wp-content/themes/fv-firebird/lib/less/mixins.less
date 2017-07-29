@@ -123,9 +123,11 @@
 }
 
 .counter-mobile-padding {
-  width: calc(~"100% + 3rem");
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  @media @mobile-xl-max {
+    width: calc(~"100% + 3rem");
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 }
 
 /* Arrows */
@@ -246,7 +248,7 @@
   font-family: @font-sans;
   font-weight: bold;
   color: @color;
-  font-size: 1.2rem;
+  //font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
@@ -254,16 +256,18 @@
   background-color: @background;
   //border: 2px solid @color;
   border-radius: 5px;
-  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 1);
+  border: 0;
 }
 
 .button{
   .button();
 }
 
-.button-hover(@background:@highlightBlue,@color:@highlightBlue) {
-  .button(@background,@color);
+.button-hover(@background:@highlightBlue,@color:@darkGray) {
+  //.button(@background,@color);
   background-color: fade(@background,40%);
+  color: @color;
 }
 
 .button:hover,

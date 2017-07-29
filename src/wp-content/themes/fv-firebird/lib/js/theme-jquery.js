@@ -19,14 +19,14 @@ jQuery(document).ready(function($) {
 			return '<li class="separator">|</li>';
 		}
 	});
-	$('form.gplaceholder .gfield_label').each(function(){
+	/*$('form.gplaceholder .gfield_label').each(function(){
 	    var placeholder = $(this).html();
 	    if(!$(this).next('.ginput_container').hasClass('ginput_container_radio')){
     	    $(this).addClass('hidden');
             //$(this).next('.ginput_container').find('input').attr('placeholder',placeholder.replace(/(<([^>]+)>)/ig,""));
             //$(this).next('.ginput_container').find('select option.first-child').html(placeholder.replace(/(<([^>]+)>)/ig,""));
         }
-	});
+	});*/
     
     $(window).scroll(function() {
        if($(window).scrollTop() == 0) {
@@ -57,6 +57,7 @@ jQuery(document).ready(function($) {
         var preheaderheight = $(".pre-header").outerHeight();
         var headerheight = $(".site-header").outerHeight();
         var hpTopHeight = $(".hp-top").outerHeight();
+        //var $preheaderWidget = $(".pre-header").html();
 
         if($( window ).width() >= 768){
             if ($('.content').find('.text-sizer').length <= 0) {
@@ -69,24 +70,33 @@ jQuery(document).ready(function($) {
                 $('.content').find('.text-sizer').remove();
             }
         }
-        
+
         if($( window ).width() >= 1024){
+            if ($("#nav-phone").length > 0) {
+                $("#nav-phone .wrap").css({height: ''});
+                $(".pre-header").html($("#nav-phone").html());
+                $("#nav-phone").remove();
+            }
+
             $(".pre-header").css({position: "fixed", top: 0});
             $(".site-header").css({position: "fixed", top: preheaderheight+"px"});
             $(".hp-top").css({position: "fixed", top: preheaderheight+headerheight+"px"});
             $(".site-container").css({marginTop: preheaderheight + headerheight + "px"});
-            
             //$(".page-title-area").css({marginTop: preheaderheight+headerheight+hpTopHeight+"px" })
             //$(".pre-header").sticky();
             //$(".site-header").sticky({topSpacing:preheaderheight});
             //$(".notification-bar").sticky({topSpacing:headerheight});
         } else {
             //$(".site-header").sticky();
+            if ($("#nav-phone").length <= 0) {
+                $(".site-header > .wrap").append("<div id=\"nav-phone\">"+$(".pre-header").html()+"</div>");
+                $(".pre-header").empty();
+            }
+
             $(".pre-header").css({position: "", top: ""});
             $(".site-header").css({position: "fixed", top: 0});
             $(".hp-top").css({position: "", top: ""});
             $(".site-container").css({marginTop: headerheight + "px"});
-
         }
     }
 

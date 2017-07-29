@@ -5,17 +5,19 @@ jQuery(document).ready(function($) {
     $('#homepage-widgets section.widget').addClass('col-sm-'+cols);
     $('#homepage-widgets section.widget').addClass('col-xs-12');
 
-    /*function windowResizeHandler() {
+    function windowResizeHandler() {
         var preheaderheight = $(".pre-header").outerHeight();
         var headerheight = $(".site-header").outerHeight();
-        if($( window ).width() >= 768){
+        if($( window ).width() >= 1024){
             //$(".hp-top").sticky({topSpacing:preheaderheight+headerheight});
-            $(".site-container").css({marginTop: preheaderheight + headerheight + "px"});
+            //$(".site-container").css({marginTop: preheaderheight + headerheight + "px"});
+            $(".site-container").css({paddingTop: (466/1199*100)+"%"});
         } else {
-            $(".site-container").css({marginTop: headerheight + "px"});
+            //$(".site-container").css({marginTop: headerheight + "px"});
+            $(".site-container").css({paddingTop: ""});
         }
     }
 
     windowResizeHandler();
-    $(window).on('resize', windowResizeHandler);*/
+    $(window).on('resize', windowResizeHandler);
 });

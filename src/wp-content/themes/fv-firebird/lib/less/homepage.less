@@ -1,16 +1,22 @@
 @import 'lesshat';
 @import 'mixins';
 
-.site-container {
+/*.site-container {
   @media @desktop {
     padding-top: 466/1199*100%; //same as hero image. the rest is calculated in JS
   }
-}
+}*/
 
 
 .hp-top{
   z-index: -1;
   width: 100%;
+
+  /*@media @desktop {
+    position: fixed;
+    top: 46px + 124px;
+  }*/
+
   .widget_sp_image{
     .image-widget-background{
       //padding: 7em 0;
@@ -113,8 +119,21 @@
       }
       .row {
         margin: 0;
+
+        @media @desktop {
+          .display(flex);
+        }
       }
     }
+
+    .button {
+      width: 100%;
+
+      @media @mobile-xl {
+        max-width: 280px;
+      }
+    }
+
     .section-content{
       .mobile-padding;
       padding-top: 1rem;
@@ -144,6 +163,10 @@
         textarea  {
           border-width: 0;
         }
+
+        textarea {
+          height: 8em;
+        }
       }
       h3,h3.gform_title{
         color: @primaryGreen;
@@ -157,12 +180,22 @@
      &.column-2{
        background-color: @highlightBlue;
        text-align: left;
+
+       @media @desktop {
+         .display(flex);
+         .flex-wrap(wrap);
+         .align-items(flex-start);
+
+         .button-wrapper {
+           width: 100%;
+           .align-self(flex-end);
+         }
+       }
+
       .button{
         .button(@offwhite,@fontGray);
         //background-color: @white;
         font-size: 14px;
-        max-width: 280px;
-        width: 100%;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -246,7 +279,7 @@
   }
   .section.section-programs{
     .mobile-padding;
-    background-position: left top;
+    background-position: left center;
     background-size: 45%;
     background-color: @white;
 
@@ -272,8 +305,8 @@
     }
 
     @media @desktop {
-      padding-top: 8rem;
-      padding-bottom: 8rem;
+      padding-top: 14%;
+      padding-bottom: 14%;
     }
 
     .section-title{

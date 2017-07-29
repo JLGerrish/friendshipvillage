@@ -116,20 +116,21 @@ Site Navigation
   body.nav-open {
     position: fixed;
   }
+
+  .site-header > .wrap {
+    .display(flex);
+    .flex-wrap(wrap);
+    .align-items(stretch);
+  }
 }
 
-#mobile-menu-open {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 0;
+#mobile-menu-open,
+#phone-menu-open {
+  .display(flex);
+  .align-items(center);
   font-size: 3rem;
   text-align: center;
   line-height: 1;
-  height: 100%;
-  .display(flex);
-  .align-items(center);
-  .justify-content(center);
 
   @media @desktop {
       display: none;
@@ -157,8 +158,20 @@ Site Navigation
   }
 }
 
+#mobile-menu-open {
+  /*display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  .display(flex);
+  .align-items(center);*/
+  .justify-content(center);
+}
+
 @media @tablet-max {
-  .nav-primary {
+  .nav-primary,
+  #nav-phone {
     .wrap {
       display: none;
       position: absolute;
@@ -227,12 +240,42 @@ Site Navigation
   }
 }
 
+.nav-primary,
+#nav-phone {
+  width: 100%;
+  position: relative;
+}
 
+#nav-phone {
+  text-transform: uppercase;
+  font-weight: bold;
+
+  a,
+  a:hover,
+  a:focus {
+    color: #fff;
+  }
+
+  .widget-area {
+    background: @primaryGreen;
+
+    .widget {
+      padding: 2rem 1rem;
+      line-height: 1.2;
+
+      li {
+        padding: .5em 0;
+        
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
 
 .nav-primary {
-  width: 100%;
   text-align: right;
-  position: relative;
 
   @media @desktop {
     width: 80%;
@@ -244,9 +287,9 @@ Site Navigation
       //.customheader(1.15);
       font-family: @font-sans;
       font-size: 1.6rem;
-      padding: 1em .75em;
+      padding: .7em 1em;
       color: @navGray;
-      font-weight: bold;
+      //font-weight: bold;
       -webkit-transition: all 0.5s ease-in-out;
       -moz-transition: all 0.5s ease-in-out;
       -ms-transition: all 0.5s ease-in-out;
@@ -254,7 +297,13 @@ Site Navigation
       transition: all 0.5s ease-in-out;
 
       @media @desktop {
-        font-size: 1.15rem;
+        font-size: 1vw;
+        font-weight: bold;
+        padding: 1.2em 1em;
+      }
+
+      @media (min-width: @screen-lg) {
+        font-size: 1.2rem;
       }
     }   
     &.first-child{
@@ -363,7 +412,7 @@ Site Navigation
         text-transform: uppercase;
       }
       >a:hover{
-        color:@orange;
+        //color:@orange;
       }
       ul{
         display: none;

@@ -18,10 +18,12 @@
 .mobile-padding {
   padding: 0 1.5rem;
 }
-.counter-mobile-padding {
-  width: calc(100% + 3rem);
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+@media (max-width: 767px) {
+  .counter-mobile-padding {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 }
 /* Arrows */
 /* Buttons */
@@ -30,30 +32,19 @@
   font-family: "Nunito Sans", "sans-serif";
   font-weight: bold;
   color: #292929;
-  font-size: 1.2rem;
   line-height: 1;
   display: table;
   margin: 1.2rem auto;
   text-decoration: none;
   background-color: #42badc;
   border-radius: 5px;
-  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
+  box-shadow: 1px 1px 5px -1px #000000;
+  border: 0;
 }
 .button:hover,
 .button a:hover {
-  padding: 1em 4em .8em 4em;
-  font-family: "Nunito Sans", "sans-serif";
-  font-weight: bold;
-  color: #42badc;
-  font-size: 1.2rem;
-  line-height: 1;
-  display: table;
-  margin: 1.2rem auto;
-  text-decoration: none;
-  background-color: #42badc;
-  border-radius: 5px;
-  box-shadow: 1px 1px 0px -1px rgba(0, 0, 0, 0);
   background-color: rgba(66, 186, 220, 0.4);
+  color: #292929;
 }
 /* Clears */
 .msd-clearfix {
@@ -74,7 +65,6 @@ Widgets
   padding: 0.4rem 0;
   font-weight: normal;
   margin-bottom: 0;
-  color: #FCB040;
 }
 /* Featured Content
 --------------------------------------------- */

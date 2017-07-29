@@ -179,6 +179,7 @@ function msdlab_do_nav() {
         $class .= ' js-superfish';
     }
 
+    print '<div id="phone-menu-open"><a href="#"><i class="fa fa-phone" aria-hidden="true"></i><span>Call Us</span></a></div>';
     print '<div id="mobile-menu-open"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i><span>Menu</span></a></div>';
 
     genesis_nav_menu( array(
@@ -360,6 +361,141 @@ add_filter ( 'genesis_home_crumb', 'msdlab_breadcrumb_home_link' );
 function msdlab_breadcrumb_home_link($crumb){
     return preg_replace('/ICON/i','<i class="fa fa-home"></i>',$crumb);
 }
+
+/* Breacrumb stuff */
+function fv_get_menu_title($postId) {
+    $menu_name = 'primary';
+
+    //echo 'test'.var_dump(get_nav_menu_locations());
+
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+        $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+        //echo 'post:'.$postId;
+        //echo var_dump($menu_items);
+        $menu_item = array_values(array_filter($menu_items, function($item) use($postId) { //1958
+            return $item->object_id == $postId;
+        }));
+
+        if (count($menu_item) > 0) {
+            return $menu_item[0]->title;
+        }
+        
+        return get_the_title( $postId );
+    }
+}
+
+// Had to pull from breadcrumb.php
+function get_breadcrumb_link( $url, $title, $content, $sep = '' ) {
+
+    // Empty title, for backward compatibility.
+    $title = '';
+
+    $itemprop_item = genesis_html5() ? ' itemprop="item"' : '';
+    $itemprop_name = genesis_html5() ? ' itemprop="name"' : '';
+
+    $link = sprintf( '<a href="%s"%s><span%s>%s</span></a>', esc_attr( $url ), $itemprop_item, $itemprop_name, $content );
+
+    /**
+        * Filter the anchor link for a single breadcrumb.
+        *
+        * @since 1.5.0
+        *
+        * @param string $link    HTML markup for anchor link, before optional separator is added.
+        * @param string $url     URL for href attribute.
+        * @param string $title   Title attribute.
+        * @param string $content Link content.
+        * @param array  $args    Arguments used to generate the breadcrumbs. Documented in Genesis_Breadcrumbs::get_output().
+        */
+    //$link = apply_filters( 'genesis_breadcrumb_link', $link, $url, $title, $content, $this->args );
+
+    if ( genesis_html5() ) {
+        $link = sprintf( '<span %s>', genesis_attr( 'breadcrumb-link-wrap' ) ) . $link . '</span>';
+    }
+
+    if ( $sep ) {
+        $link .= $sep;
+    }
+
+    return $link;
+
+}
+
+//add_filter( 'genesis_breadcrumb_link', 'fv_genesis_breadcrumb_link', 10, 5);
+/*function fv_genesis_breadcrumb_link( $link, $url, $title, $content, $args ) {
+    $menu_name = 'primary';
+
+    $page = get_page_by_title( $content );
+    $pageId = $page->ID;
+    echo 'page'.$content.$pageId;
+
+    if ( $pageId > 0 && ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+        $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+        //echo var_dump($menu);
+        //return $link;
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+        //echo 'post:'.$postId;
+        //echo var_dump($menu_items);
+        $menu_item = array_values(array_filter($menu_items, function($item) use($pageId) { //1958
+            return $item->object_id == $pageId;
+        }));
+
+        if (count($menu_item) > 0) {
+            $link = str_replace($content, $menu_item[0]->title, $link);
+        }
+        //echo 'crumb:'.$crumb;
+    }
+
+    return $link;
+}*/
+
+add_filter( 'genesis_page_crumb', 'fv_genesis_page_crumb', 10, 2);
+function fv_genesis_page_crumb( $crumb, $args ){
+    global $wp_query;
+    global $_genesis_breadcrumb;
+
+    if ( is_front_page() ) {
+        // Don't do anything - we're on the front page and we've already dealt with that elsewhere.
+        return $crumb;
+    } else {
+        $post = $wp_query->get_queried_object();
+
+        // If this is a top level Page, it's simple to output the breadcrumb.
+        if ( ! $post->post_parent ) {
+            $crumb = fv_get_menu_title( $post->ID );
+        } else {
+            if ( isset( $post->ancestors ) ) {
+                if ( is_array( $post->ancestors ) ) {
+                    $ancestors = array_values( $post->ancestors );
+                } else {
+                    $ancestors = array( $post->ancestors );
+                }
+            } else {
+                $ancestors = array( $post->post_parent );
+            }
+
+            $crumbs = array();
+            foreach ( $ancestors as $ancestor ) {
+                array_unshift(
+                    $crumbs,
+                    get_breadcrumb_link(
+                        get_permalink( $ancestor ),
+                        '',
+                        fv_get_menu_title( $ancestor )
+                    )
+                );
+            }
+
+            // Add the current page title.
+            $crumbs[] = fv_get_menu_title( $post->ID );
+
+            $crumb = implode( $args['sep'], $crumbs );
+        }
+    }
+
+    return $crumb;
+}
+/* End breacrumb stuff */
 
 function sp_post_info_filter($post_info) {
     $post_info = 'Posted [post_date]';
