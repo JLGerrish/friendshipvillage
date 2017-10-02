@@ -27,8 +27,8 @@
 #src/wp-content/themes/
 #!src/wp-content
 #!src/wp-content/themes
-!src/wp-content/themes/fv-firebird
-!src/wp-content/themes/fv-firebird/**
+!src/wp-content/themes/friendshipvillage
+!src/wp-content/themes/friendshipvillage/**
 
 
 # Apple stuff
