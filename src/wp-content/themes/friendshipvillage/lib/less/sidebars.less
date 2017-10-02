@@ -1,0 +1,285 @@
+@import 'mixins';
+
+/*
+Sidebars
+---------------------------------------------------------------------------------------------------- */
+
+.sidebar {
+  //background: @offwhite;
+  //color: @ltgrey;
+  //padding: 6rem 2rem 2rem 0;
+  height: 100%;
+  padding: 0;
+
+  @media @mobile-xl-max {
+    .counter-mobile-padding;
+  }
+
+  /*@media @desktop {
+    width: 320px;
+  }*/
+
+  a {
+    border-bottom: 1px solid #ddd;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
+    word-wrap: break-word;
+  }
+
+  ul > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .widget {
+    border-radius: 0px;
+    background-color: #f0f0f0;
+    margin-bottom: 1rem;
+
+    .widget-title{
+      .custombody(3);
+      font-family: @font-serif;
+      font-style: normal;
+      line-height: 1;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: @fontGray;
+      //color: @blue;
+
+      @media (min-width: @screen-md) and @tablet-max {
+        font-size: 2.4vw;
+      }
+
+      &:before {
+        font-family: 'FontAwesome';
+        font-size: 6rem;
+        float: left;
+        margin-right: 1rem;
+        font-weight: normal;
+        color: @primaryGreen;
+        line-height: .9;
+
+        @media (min-width: @screen-md) and @tablet-max {
+          font-size: 5vw;
+        }
+      }
+
+      &:after {
+        content: '';
+        clear: both;
+      }
+    }
+
+    a {
+      color: @primaryGreen;
+      text-decoration: underline;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 3;
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+
+    &.widget-event-calendar {
+      .widget-title{
+        &:before {
+          content: '\f073';
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+
+    &.widget-faq {
+      .widget-title{
+        line-height: 1.75;
+
+        &:before {
+          content: '\f128';
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    &.widget-testimonials {
+      text-align: right;
+
+      .widget-title{
+        text-align: left;
+      }
+
+      blockquote {
+        padding: 0;
+        text-align: left;
+
+        p {
+          position: relative;
+          line-height: 1.7;
+
+          &:before,
+          &:after {
+            //font-size: 2.5em; //IE problems
+            font-size: 4rem;
+            font-family: @font-serif;
+            color: @primaryGreen;
+          }
+
+          &:before {
+            position: absolute;
+            left: -.5em;
+            top: -.15em;
+            line-height: 1;
+          }
+
+          &:after {
+            vertical-align: middle;
+            line-height: 0;
+          }
+        }
+      }
+
+      .author {
+        text-transform: uppercase;
+      }
+    }
+
+    &.widget-cost-calculator {
+      .widget-title{
+        &:before {
+          content: '\f1ec';
+        }
+      }
+    }
+
+    &.widget-schedule-tour {
+      .widget-title{
+        &:before {
+          content: '\f207';
+        }
+      }
+    }
+  }
+
+  .enews-widget {
+    background-color: #333;
+  }
+
+  /*Text Widget with Click */
+  .widget_text{
+    padding: 2rem;
+    //color: @medgrey;
+
+    .textwidget{
+        .readmore{
+          .button();
+          float: right;
+        }
+    }
+    a {border: none;}
+  }
+  .widget_sp_image{
+    text-align: center;
+    .link{
+      a{
+        color: @dkgrey;
+        border: 0;
+        i{
+          color: @primaryGreen;
+        }
+      }
+    }
+  }
+  .widget.gform_widget{
+      //margin-right: -2rem;
+      //margin-left: -50rem;
+      //padding: 0.4rem 2rem 0.4rem 50rem;
+  }
+  span.fa-stack{
+    color: @primaryGreen;
+  }
+
+  //gravity forms override
+  /*.gform_wrapper {
+    .gform_heading {
+      margin: 0;
+    }
+
+    ul.gform_fields {
+      li.gfield {
+        margin: 0;
+        padding: .3rem 0;
+      }
+    }
+
+    .top_label div.ginput_container {
+      margin: 0;
+    }
+
+    &.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select, 
+    &.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select, 
+    &.gf_browser_chrome ul.gform_fields li.gfield input[type=radio], 
+    &.gf_browser_chrome ul.gform_fields li.gfield select {
+      margin-left: 0;
+    }
+  }*/
+
+
+  .contact-form {
+    background: @primaryGreen;
+    padding: 2rem;
+
+    h3 {
+      color: #fff;
+      margin: 0 0 1rem 0;
+    }
+
+    .button {
+      width: 100%;
+      background: @white;
+      color: @darkGray;
+      font-weight: bold;
+      border: 0;
+    }
+  }
+
+  // override default gravity forms styles..
+  .gform_wrapper {
+    h3.gform_title {
+      margin: 0 0 1rem 0;
+    }
+
+    .top_label .gfield_label {
+      display: none;
+    }
+
+    ul.gform_fields li.gfield {
+      padding: .3rem 0;
+      margin: 0;
+    }
+
+    .gform_footer input[type=submit] {
+      width: 100%;
+    }
+
+    .gform_heading {
+      margin: 0;
+    }
+  }
+
+  .gform_confirmation_message {
+    color: #fff;
+  }
+}
+
