@@ -8749,11 +8749,11 @@ Site Header
   max-width: 206px;
   background: url(../img/logo.jpg) no-repeat center left;
   background-size: contain;
-  -webkit-transition: all 0.5s ease-in-out;
+  /*-webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;*/
   /*@media @desktop {
     margin-bottom: 1rem;
   }*/
@@ -9140,11 +9140,6 @@ Site Navigation
   font-size: 1.6rem;
   padding: .7em 1em;
   color: #2c363f;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 @media (min-width: 1024px) {
   .nav-primary li.menu-item a {

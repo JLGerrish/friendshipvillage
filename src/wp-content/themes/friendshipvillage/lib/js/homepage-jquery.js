@@ -6,8 +6,8 @@ jQuery(document).ready(function($) {
     $('#homepage-widgets section.widget').addClass('col-xs-12');
 
     function windowResizeHandler() {
-        var preheaderheight = $(".pre-header").outerHeight();
-        var headerheight = $(".site-header").outerHeight();
+        //var preheaderheight = $(".pre-header").outerHeight();
+        //var headerheight = $(".site-header").outerHeight();
         if($( window ).width() >= 1024){
             //$(".hp-top").sticky({topSpacing:preheaderheight+headerheight});
             //$(".site-container").css({marginTop: preheaderheight + headerheight + "px"});

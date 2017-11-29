@@ -54,9 +54,6 @@ jQuery(document).ready(function($) {
     });
 
     function windowResizeHandler() {
-        var preheaderheight = $(".pre-header").outerHeight();
-        var headerheight = $(".site-header").outerHeight();
-        var hpTopHeight = $(".hp-top").outerHeight();
         //var $preheaderWidget = $(".pre-header").html();
 
         if($( window ).width() >= 768){
@@ -78,6 +75,10 @@ jQuery(document).ready(function($) {
                 $("#nav-phone").remove();
             }
 
+            var preheaderheight = $(".pre-header").outerHeight();
+            var headerheight = $(".site-header").outerHeight();
+            //var hpTopHeight = $(".hp-top").outerHeight();
+
             $(".pre-header").css({position: "fixed", top: 0});
             $(".site-header").css({position: "fixed", top: preheaderheight+"px"});
             $(".hp-top").css({position: "fixed", top: preheaderheight+headerheight+"px"});
@@ -93,6 +94,8 @@ jQuery(document).ready(function($) {
                 $(".pre-header").empty();
             }
 
+            var headerheight = $(".site-header").outerHeight();
+
             $(".pre-header").css({position: "", top: ""});
             $(".site-header").css({position: "fixed", top: 0});
             $(".hp-top").css({position: "", top: ""});
@@ -101,5 +104,9 @@ jQuery(document).ready(function($) {
     }
 
     windowResizeHandler();
-    $(window).on('resize', windowResizeHandler);
+    var windowResizeTimeout;
+    $(window).on('resize', function() {
+        clearTimeout(windowResizeTimeout);
+        windowResizeTimeout = setTimeout(windowResizeHandler, 0);
+    });
 });
