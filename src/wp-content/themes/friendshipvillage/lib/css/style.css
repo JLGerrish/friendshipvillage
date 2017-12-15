@@ -8489,6 +8489,9 @@ body .gform_wrapper :-moz-placeholder {
 body .gform_wrapper .gfield_required {
   color: inherit;
 }
+body .gform_wrapper.gf_browser_ie .gform_footer input.button {
+  padding: inherit;
+}
 body div.gform_wrapper input[type="email"],
 body div.gform_wrapper input[type="text"],
 body div.gform_wrapper input[type="tel"],
