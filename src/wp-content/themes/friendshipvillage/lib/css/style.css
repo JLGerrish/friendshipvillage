@@ -8548,7 +8548,7 @@ body div.gform_wrapper .gform_footer input[type="submit"] {
   font-size: 1.4rem;
   display: table;
 }
-body form.gplaceholder .gfield_label {
+body form.gplaceholder .gfield:not(.gplaceholder-show) .gfield_label {
   display: none;
 }
 /* Jetpack
@@ -9706,6 +9706,9 @@ Sidebars
   /*@media @desktop {
     width: 320px;
   }*/
+  /*ul > li:last-child {
+    margin-bottom: 0;
+  }*/
   /*Text Widget with Click */
   /*.gform_wrapper {
     .gform_heading {
@@ -9749,9 +9752,6 @@ Sidebars
   margin-bottom: 6px;
   margin-bottom: 0.6rem;
   word-wrap: break-word;
-}
-.sidebar ul > li:last-child {
-  margin-bottom: 0;
 }
 .sidebar .widget {
   border-radius: 0px;
@@ -9913,11 +9913,14 @@ Sidebars
   font-weight: bold;
   border: 0;
 }
+.sidebar .gform_wrapper {
+  color: #fff;
+  /*.top_label .gfield_label {
+      display: none;
+    }*/
+}
 .sidebar .gform_wrapper h3.gform_title {
   margin: 0 0 1rem 0;
-}
-.sidebar .gform_wrapper .top_label .gfield_label {
-  display: none;
 }
 .sidebar .gform_wrapper ul.gform_fields li.gfield {
   padding: .3rem 0;

@@ -228,6 +228,9 @@
 }
 .sectioned-page-wrapper .section.section-forms .section-content .gform_wrapper {
   margin: 0;
+  /*.top_label .gfield_label {
+          display: none;
+        }*/
 }
 .sectioned-page-wrapper .section.section-forms .section-content .gform_wrapper input[type="text"],
 .sectioned-page-wrapper .section.section-forms .section-content .gform_wrapper input[type="password"],
@@ -250,9 +253,6 @@
 }
 .sectioned-page-wrapper .section.section-forms .section-content .gform_wrapper textarea {
   height: 8em;
-}
-.sectioned-page-wrapper .section.section-forms .section-content .gform_wrapper .top_label .gfield_label {
-  display: none;
 }
 .sectioned-page-wrapper .section.section-forms .section-content .gform_wrapper ul.gform_fields li.gfield {
   padding: .3rem 0;
