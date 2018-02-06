@@ -14,6 +14,24 @@ main.content{
 }
 /* Entries
 --------------------------------------------- */
+body.blog {
+  article:first-of-type {
+    border-top: solid 1px;
+    padding-top: 40px;
+    margin-top: 40px;
+  }
+  article {
+    .entry-title {
+      font-size: 2rem;
+      font-weight: normal;
+
+      @media @tablet {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
 .post-image {
 }
 article.entry {

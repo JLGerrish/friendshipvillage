@@ -242,7 +242,7 @@ function msdlab_ro_layout_logic() {
 function msdlab_maybe_move_title(){
     global $post;
     $template_file = get_post_meta($post->ID,'_wp_page_template',TRUE);
-    if(is_page()){
+    if(is_page() | is_home()){
         //remove_action('genesis_entry_header','genesis_do_post_title'); //move the title out of the content area
         add_action('msdlab_title_area','msdlab_do_section_title');
         add_action('genesis_after_header','msdlab_do_title_area');
@@ -269,7 +269,7 @@ function msdlab_do_title_area(){
 function msdlab_do_section_title(){
     if(is_front_page()){
         //add_action('genesis_entry_header','genesis_do_post_title',5);
-    } elseif(is_page()){
+    } elseif(is_page() | is_home()){
         global $post;
         $myid = $post->ID;
         $lvl = 2;
@@ -277,6 +277,9 @@ function msdlab_do_section_title(){
             //add_action('genesis_entry_header','genesis_do_post_title',5);
             //$lvl = 2;
             $myid = get_topmost_parent($post->ID);
+        }
+        if(is_home()) {
+            $myid = get_queried_object_id();
         }
 
         // mobile thumb id relies on plugin: Mobile Featured Image (https://wordpress.org/plugins/mobile-featured-image/)
@@ -327,6 +330,9 @@ function msdlab_do_section_title_styles()
         //add_action('genesis_entry_header','genesis_do_post_title',5);
         //$lvl = 2;
         $myid = get_topmost_parent($post->ID);
+    }
+    if(is_home()) {
+        $myid = get_queried_object_id();
     }
 
     $thumb_url = msdlab_get_thumbnail_url($myid,'full');
@@ -494,6 +500,11 @@ function fv_genesis_page_crumb( $crumb, $args ){
     }
 
     return $crumb;
+}
+
+add_filter( 'genesis_blog_crumb', 'fv_genesis_blog_crumb', 10, 2);
+function fv_genesis_blog_crumb( $crumb, $args ) {
+    return fv_genesis_page_crumb($crumb, $args);
 }
 /* End breacrumb stuff */
 
@@ -762,4 +773,14 @@ if(!function_exists('msdlab_custom_hooks_management')){
     }
 }
 
-
+function add_blog_page_content_before_post_list() {
+	if ( is_home() ) {        
+        global $post;
+        $page_for_posts_id = get_option('page_for_posts');
+        $post = get_page($page_for_posts_id);
+        echo "<header class=\"entry-header\"><h1 class=\"entry-title\">".$post->post_title."</h1></header>";
+        echo "<div class=\"entry-content\">";
+        echo wpautop($post->post_content);
+        echo "</div>";
+	}
+}

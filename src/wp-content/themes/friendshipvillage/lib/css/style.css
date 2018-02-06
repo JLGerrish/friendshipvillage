@@ -9381,6 +9381,20 @@ main.content {
 }
 /* Entries
 --------------------------------------------- */
+body.blog article:first-of-type {
+  border-top: solid 1px;
+  padding-top: 40px;
+  margin-top: 40px;
+}
+body.blog article .entry-title {
+  font-size: 2rem;
+  font-weight: normal;
+}
+@media (min-width: 768px) {
+  body.blog article .entry-title {
+    font-size: 3rem;
+  }
+}
 article.entry {
   border-radius: 3px;
   margin-bottom: 40px;

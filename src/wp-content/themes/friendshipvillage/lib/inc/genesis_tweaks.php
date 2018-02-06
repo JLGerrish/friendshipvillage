@@ -109,3 +109,6 @@ add_action('after_404','msdlab_sitemap');
 /*** Blog Header ***/
 //add_action('genesis_before_loop','msd_add_blog_header');
 add_action('wp_head', 'msdlab_custom_hooks_management');
+
+// Add content of page called "blog" to the page that contains the list of blog posts
+add_action  ( 'genesis_before_loop', 'add_blog_page_content_before_post_list', 11);
