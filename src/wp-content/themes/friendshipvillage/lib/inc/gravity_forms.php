@@ -53,11 +53,12 @@ return '
 <div class="validation_error">There was a problem with your submission. Errors have been highlighted below.</div>
 ';
 }
-
+//rise to top of form
 add_filter( 'gform_confirmation_anchor_14', function() {
     return 300;
 } );
 
+//add confirmation message and GA dataLayer push 
 add_filter( 'gform_confirmation_14', 'custom_confirmation_message', 10, 4 );
 function custom_confirmation_message( $confirmation, $form, $entry, $ajax ) {
   $confirmation = 'Thank you!  The Evaluation Guide Checklist is downloading.  <a title="Download Now" href="https://friendshipvillagemi.com/wp-content/uploads/2018/03/FriendshipVillage-Checklist-D5.pdf" target="_blank">Click here</a> if your download does not start automatically.' .
